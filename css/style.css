@@ -9,6 +9,12 @@ h1,
 h2,
 h3 {
   font-family: "Abril Fatface", cursive;
+  color: #eae8e6;
+}
+
+h1 {
+  font-size: 87px;
+  font-weight: 400;
 }
 
 ul {
@@ -17,6 +23,25 @@ ul {
 
 i {
   color: #eae8e6;
+}
+
+a {
+  display: inline-block;
+  text-decoration: none;
+}
+
+.btn {
+  padding: 20px 40px;
+  color: #ae8652;
+  border: 2px solid #ae8652;
+  font-size: 18px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+.btn:hover {
+  color: #65401e;
+  border-color: #65401e;
+  transition: 0.3s linear;
 }
 
 header {
@@ -76,6 +101,22 @@ header .container .header-bottom {
 header .container .header-bottom .left {
   width: 50%;
   height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+header .container .header-bottom .left .text hr {
+  width: 250px;
+  margin: 30px 0;
+  border: 2px solid #ae8652;
+}
+header .container .header-bottom .left .text p {
+  font-size: 24px;
+  color: #505050;
+}
+header .container .header-bottom .left .text a {
+  margin: 50px 0;
 }
 header .container .header-bottom .right {
   width: 50%;

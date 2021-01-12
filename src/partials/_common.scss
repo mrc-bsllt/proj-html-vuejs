@@ -8,10 +8,25 @@ h1,
 h2,
 h3 {
   font-family: 'Abril Fatface', cursive;
+  color: $standardTextColor;
+}
+h1 {
+  font-size: 87px;
+  font-weight: $standardFontweight;
 }
 ul {
   list-style: none;
 }
 i {
-  color: $iconsColor;
+  color: $standardTextColor;
+}
+a {
+  display: inline-block;
+  text-decoration: none;
+}
+.btn {
+  @include buttonsSetup ($brandColor);
+  &:hover {
+    @include hoverButtonSetup($hoverButtonsColor);
+  }
 }

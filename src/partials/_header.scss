@@ -12,7 +12,7 @@ header {
 
       .left {
         @include headerTopChildSet;
-        @include displaySet(row, start, end);
+        @include displaySet(row, flex-start, flex-end);
 
         img {
 
@@ -21,7 +21,7 @@ header {
 
       .right {
         @include headerTopChildSet;
-        @include displaySet(row, end, end);
+        @include displaySet(row, flex-end, flex-end);
 
         #icons-list {
 
@@ -35,7 +35,7 @@ header {
                 vertical-align: middle;
                 &:hover {
                   color: $brandColor;
-                  transition: 0.3s linear;
+                  transition: $standardTransition;
                 }
               }
               i.fa-shopping-cart {
@@ -56,11 +56,30 @@ header {
 
       .left {
         @include headerTopChildSet;
-      }
+        @include displaySet(row, flex-start, center);
+
+        .text {
+
+          hr {
+            width: 250px;
+            margin: 30px 0;
+            border: 2px solid $brandColor;
+          }
+          p {
+            font-size: 24px;
+            color: #505050;
+          }
+          a {
+            margin: 50px 0;
+
+          }
+        } // .text
+      } // .left
 
       .right {
         @include headerTopChildSet;
-      }
+
+      } // .right
     } //.header-bottom
   } // .container
 } // header

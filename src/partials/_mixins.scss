@@ -4,7 +4,7 @@
   -moz-background-size: cover;
   -o-background-size: cover;
 }
-@mixin headerContainer ($width) {
+@mixin headerContainer($width) {
   width: $width;
   height: 100%;
   margin: auto;
@@ -16,6 +16,19 @@
 @mixin displaySet ($direction, $jString, $aString) {
   display: flex;
   flex-direction: #{$direction};
-  justify-content: flex-#{$jString};
-  align-items: flex-#{$aString};
+  justify-content: #{$jString};
+  align-items: #{$aString};
+}
+@mixin buttonsSetup($color) {
+  padding: 20px 40px;
+  color: $color;
+  border: 2px solid $color;
+  font-size: 18px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+@mixin hoverButtonSetup($color) {
+  color: $color;
+  border-color: $color;
+  transition: $standardTransition;
 }
