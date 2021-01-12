@@ -8,19 +8,25 @@ h1,
 h2,
 h3 {
   font-family: 'Abril Fatface', cursive;
-  color: $standardTextColor;
   font-weight: $standardFontweight;
 }
 h1 {
   font-size: 87px;
+  color: $standardTextColor;
 }
 h2 {
-   font-size: 70px;
+  font-size: 70px;
+  color: $standardTextColor;
+}
+h3 {
+  color: $h3Color;
+  font-size: 32px;
 }
 h4 {
   color: $brandColor;
   font-size: 16px;
   text-transform: uppercase;
+  font-weight: 900;
 }
 ul {
   list-style: none;

@@ -26,25 +26,52 @@ main {
       @include headerContainer($standardContainerWidth);
 
       .text {
-        padding: 70px 0 100px 0;
+        padding: 70px 0;
         text-align: center;
       }
 
       .column-section {
         @include displaySet(row, flex-start, stretch);
+        flex-wrap: wrap;
 
         .column {
           width: calc(100% / 3);
-          height: 500px;
-          background-color: red;
+          padding: 50px;
+
+          .content {
+            width: 100%;
+            text-align: center;
+
+            img {
+              height: 110px;
+            }
+            h3 {
+              margin: 20px 0;
+            }
+            p {
+              font-size: 18px;
+              color: $mainParagrapghColor;
+              font-weight: 300;
+              line-height: 32.4px;
+            }
+          } // content
         } // column
       } // column-section
+      .service-link {
+        text-align: center;
+      }
     } // container
   } // Services
 
   #avada-grooming-products {
-    height: 500px;
-    background-color: red;
+    position: relative;
+    height: 1070px;
+    background-image: url("../img/avadabarbers-reviewsbackground.jpg");
+    @include backgroundSize;
+    background-position: top;
+    &::before {
+      @include triangleLayout(#121314);
+    }
   } //avada-grooming-products
 
 } // main

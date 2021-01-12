@@ -9,22 +9,29 @@ h1,
 h2,
 h3 {
   font-family: "Abril Fatface", cursive;
-  color: #b0b0b0;
   font-weight: 400;
 }
 
 h1 {
   font-size: 87px;
+  color: #b0b0b0;
 }
 
 h2 {
   font-size: 70px;
+  color: #b0b0b0;
+}
+
+h3 {
+  color: #ae8d67;
+  font-size: 32px;
 }
 
 h4 {
   color: #ae8652;
   font-size: 16px;
   text-transform: uppercase;
+  font-weight: 900;
 }
 
 ul {
@@ -222,7 +229,7 @@ main #services .container {
   margin: auto;
 }
 main #services .container .text {
-  padding: 70px 0 100px 0;
+  padding: 70px 0;
   text-align: center;
 }
 main #services .container .column-section {
@@ -230,13 +237,50 @@ main #services .container .column-section {
   flex-direction: row;
   justify-content: flex-start;
   align-items: stretch;
+  flex-wrap: wrap;
 }
 main #services .container .column-section .column {
   width: calc(100% / 3);
-  height: 500px;
-  background-color: red;
+  padding: 50px;
+}
+main #services .container .column-section .column .content {
+  width: 100%;
+  text-align: center;
+}
+main #services .container .column-section .column .content img {
+  height: 110px;
+}
+main #services .container .column-section .column .content h3 {
+  margin: 20px 0;
+}
+main #services .container .column-section .column .content p {
+  font-size: 18px;
+  color: #505050;
+  font-weight: 300;
+  line-height: 32.4px;
+}
+main #services .container .service-link {
+  text-align: center;
 }
 main #avada-grooming-products {
-  height: 500px;
-  background-color: red;
+  position: relative;
+  height: 1070px;
+  background-image: url("../img/avadabarbers-reviewsbackground.jpg");
+  background-size: cover;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-position: top;
+}
+main #avada-grooming-products::before {
+  content: "";
+  position: absolute;
+  top: -100px;
+  left: 50%;
+  transform: translatex(-50%);
+  width: 0;
+  height: 0;
+  border-left: 950px solid transparent;
+  border-right: 950px solid transparent;
+  border-bottom: 100px solid #121314;
 }
