@@ -192,6 +192,7 @@ main #pro-barbers {
   -moz-background-size: cover;
   -o-background-size: cover;
   height: 560px;
+  padding-bottom: 100px;
   background-image: url("../img/avadabarbers-about-introbackground.jpg");
   background-position: top;
 }
@@ -214,6 +215,26 @@ main #services::before {
   border-left: 950px solid transparent;
   border-right: 950px solid transparent;
   border-bottom: 100px solid #ffffff;
+}
+main #services .container {
+  width: 60%;
+  height: 100%;
+  margin: auto;
+}
+main #services .container .text {
+  padding: 70px 0 100px 0;
+  text-align: center;
+}
+main #services .container .column-section {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: stretch;
+}
+main #services .container .column-section .column {
+  width: calc(100% / 3);
+  height: 500px;
+  background-color: red;
 }
 main #avada-grooming-products {
   height: 500px;

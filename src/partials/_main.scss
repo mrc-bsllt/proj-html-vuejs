@@ -5,6 +5,7 @@ main {
     @include displaySet(column, center, center);
     @include backgroundSize;
     height: 560px;
+    padding-bottom: $triangleHeight;
     background-image: url("../img/avadabarbers-about-introbackground.jpg");
     background-position: top;
 
@@ -20,10 +21,30 @@ main {
     &::before {
       @include triangleLayout(#ffffff);
     }
-  }
+
+    .container {
+      @include headerContainer($standardContainerWidth);
+
+      .text {
+        padding: 70px 0 100px 0;
+        text-align: center;
+      }
+
+      .column-section {
+        @include displaySet(row, flex-start, stretch);
+
+        .column {
+          width: calc(100% / 3);
+          height: 500px;
+          background-color: red;
+        } // column
+      } // column-section
+    } // container
+  } // Services
+
   #avada-grooming-products {
     height: 500px;
     background-color: red;
-  }
+  } //avada-grooming-products
 
 } // main
