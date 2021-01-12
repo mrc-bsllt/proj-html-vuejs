@@ -32,3 +32,15 @@
   border-color: $color;
   transition: $standardTransition;
 }
+@mixin triangleLayout($color) {
+  content: "";
+  position: absolute;
+  top: -100px;
+  left: 50%;
+  transform: translatex(-50%);
+  width: 0;
+  height: 0;
+  border-left: 950px solid transparent;
+  border-right: 950px solid transparent;
+  border-bottom: 100px solid $color;
+}

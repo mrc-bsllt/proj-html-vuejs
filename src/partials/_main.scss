@@ -1,4 +1,5 @@
 main {
+  overflow-x: hidden;
 
   #pro-barbers {
     @include displaySet(column, center, center);
@@ -16,6 +17,9 @@ main {
     position: relative;
     width: 100%;
     height: 100vh;
+    &::before {
+      @include triangleLayout(#ffffff);
+    }
   }
   #avada-grooming-products {
     height: 500px;

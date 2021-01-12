@@ -179,6 +179,9 @@ header .aside a p {
   color: #4f659a;
 }
 
+main {
+  overflow-x: hidden;
+}
 main #pro-barbers {
   display: flex;
   flex-direction: column;
@@ -199,6 +202,18 @@ main #services {
   position: relative;
   width: 100%;
   height: 100vh;
+}
+main #services::before {
+  content: "";
+  position: absolute;
+  top: -100px;
+  left: 50%;
+  transform: translatex(-50%);
+  width: 0;
+  height: 0;
+  border-left: 950px solid transparent;
+  border-right: 950px solid transparent;
+  border-bottom: 100px solid #ffffff;
 }
 main #avada-grooming-products {
   height: 500px;
