@@ -30,3 +30,10 @@ a {
     @include hoverButtonSetup($hoverButtonsColor);
   }
 }
+.square {
+  width: $squareAsideHeight;
+  height: $squareAsideHeight;
+  margin: 5px 0;
+  background-color: #ffffff;
+  border-radius: 5px;
+}

@@ -60,6 +60,13 @@
         </div>
 
       </div>
+
+      <div class="aside">
+        <a v-for="item in asideItem" class="square" href="#">
+          <i :class="item.icon"></i>
+          <p>{{ item.text }}</p>
+        </a>
+      </div>
     </header>
     <!-- /header -->
 

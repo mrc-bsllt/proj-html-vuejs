@@ -85,4 +85,29 @@ header {
       } // .right
     } //.header-bottom
   } // .container
+
+  .aside {
+    position: absolute;
+    top: 0;
+    right: 0;
+    @include displaySet(column, flex-start, center);
+    width: 100px;
+    height: 100%;
+    padding: 150px 0;
+
+    a {
+      @include displaySet(column, center, center);
+
+      i {
+        margin-bottom: 8px;
+        color: $asideColor;
+        font-size: 28px;
+      }
+      p {
+        font-size: 12px;
+        font-weight: 700;
+        color: $asideColor;
+      }
+    } // a
+  } // aside
 } // header

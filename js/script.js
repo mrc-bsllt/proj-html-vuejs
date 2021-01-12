@@ -21,8 +21,18 @@ var header = new Vue(
       mainHeaderImg: {
         name: "main img",
         path: "avadabarbers_hero_focalmirror-600x825.png"
-      }
-    },
+      },
+      asideItem: [
+        {
+          icon: "fas fa-desktop",
+          text: "Demos"
+        },
+        {
+          icon: "fas fa-shopping-cart",
+          text: "Buy Now"
+        }
+      ]
+    }, //fine data
     methods: {
       toogleActiveClass: function(index) {
         this.navIcons[index].active = !this.navIcons[index].active;

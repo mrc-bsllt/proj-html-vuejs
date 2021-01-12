@@ -44,6 +44,14 @@ a {
   transition: 0.3s linear;
 }
 
+.square {
+  width: 65px;
+  height: 65px;
+  margin: 5px 0;
+  background-color: #ffffff;
+  border-radius: 5px;
+}
+
 header {
   height: 100vh;
   background-image: url("../img/avadabarbers-homepage-hero-bg.jpg");
@@ -130,4 +138,32 @@ header .container .header-bottom .right img {
      object-fit: contain;
   -o-object-position: top;
      object-position: top;
+}
+header .aside {
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100px;
+  height: 100%;
+  padding: 150px 0;
+}
+header .aside a {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+header .aside a i {
+  margin-bottom: 8px;
+  color: #4f659a;
+  font-size: 28px;
+}
+header .aside a p {
+  font-size: 12px;
+  font-weight: 700;
+  color: #4f659a;
 }
