@@ -1,0 +1,25 @@
+main {
+
+  #pro-barbers {
+    @include displaySet(column, center, center);
+    @include backgroundSize;
+    height: 560px;
+    background-image: url("../img/avadabarbers-about-introbackground.jpg");
+    background-position: top;
+
+    h2 {
+      margin-bottom: 40px;
+    }
+
+  } // pro-barbers
+  #services {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+  }
+  #avada-grooming-products {
+    height: 500px;
+    background-color: red;
+  }
+
+} // main

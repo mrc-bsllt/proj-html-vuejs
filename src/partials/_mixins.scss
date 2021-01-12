@@ -13,11 +13,11 @@
   width: 50%;
   height: 100%;
 }
-@mixin displaySet ($direction, $jString, $aString) {
+@mixin displaySet($direction, $justify, $align) {
   display: flex;
   flex-direction: #{$direction};
-  justify-content: #{$jString};
-  align-items: #{$aString};
+  justify-content: #{$justify};
+  align-items: #{$align};
 }
 @mixin buttonsSetup($color) {
   padding: 15px 40px;

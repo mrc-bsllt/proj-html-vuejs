@@ -2,6 +2,7 @@ header {
   height: 100vh;
   background-image: url("../img/avadabarbers-homepage-hero-bg.jpg");
   @include backgroundSize;
+  background-position: top;
 
   .container {
     @include headerContainer($standardContainerWidth);
