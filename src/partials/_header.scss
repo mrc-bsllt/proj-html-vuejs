@@ -17,13 +17,38 @@ header {
         img {
 
         }
-      }
+      } // .left
 
       .right {
         @include headerTopChildSet;
         @include displaySet(row, end, end);
-      }
-    }
+
+        #icons-list {
+
+          li {
+            display: inline-block;
+
+            a {
+
+              i {
+                margin: $iconsMargin;
+                vertical-align: middle;
+                &:hover {
+                  color: $brandColor;
+                  transition: 0.3s linear;
+                }
+              }
+              i.fa-shopping-cart {
+                font-size: 17px;
+              }
+              i.fa-bars {
+                font-size: 27px;
+              }
+            } //a
+          } //li
+        } //#icons-list
+      } //.right
+    } // header-top
 
     .header-bottom {
       display: flex;
@@ -36,6 +61,6 @@ header {
       .right {
         @include headerTopChildSet;
       }
-    }
-  }
-}
+    } //.header-bottom
+  } // .container
+} // header

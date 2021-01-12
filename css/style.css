@@ -11,6 +11,14 @@ h3 {
   font-family: "Abril Fatface", cursive;
 }
 
+ul {
+  list-style: none;
+}
+
+i {
+  color: #eae8e6;
+}
+
 header {
   height: 100vh;
   background-image: url("../img/avadabarbers-homepage-hero-bg.jpg");
@@ -43,6 +51,23 @@ header .container .header-top .right {
   flex-direction: row;
   justify-content: flex-end;
   align-items: flex-end;
+}
+header .container .header-top .right #icons-list li {
+  display: inline-block;
+}
+header .container .header-top .right #icons-list li a i {
+  margin: 15px;
+  vertical-align: middle;
+}
+header .container .header-top .right #icons-list li a i:hover {
+  color: #ae8652;
+  transition: 0.3s linear;
+}
+header .container .header-top .right #icons-list li a i.fa-shopping-cart {
+  font-size: 17px;
+}
+header .container .header-top .right #icons-list li a i.fa-bars {
+  font-size: 27px;
 }
 header .container .header-bottom {
   display: flex;

@@ -2,7 +2,10 @@ var header = new Vue(
   {
     el: "header",
     data: {
-      logoImg: "avadabarbers-logo-x1.png"
+      logoImg: {
+        name: "logo",
+        path: "avadabarbers-logo-x1.png"
+      }
     },
     methods: {
 
