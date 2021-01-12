@@ -31,7 +31,7 @@ a {
 }
 
 .btn {
-  padding: 20px 40px;
+  padding: 15px 40px;
   color: #ae8652;
   border: 2px solid #ae8652;
   font-size: 18px;
@@ -59,7 +59,7 @@ header .container {
 }
 header .container .header-top {
   display: flex;
-  height: 90px;
+  height: 95px;
 }
 header .container .header-top .left {
   width: 50%;
@@ -96,7 +96,7 @@ header .container .header-top .right #icons-list li a i.fa-bars {
 }
 header .container .header-bottom {
   display: flex;
-  height: calc(100% - 90px);
+  height: calc(100% - 95px);
 }
 header .container .header-bottom .left {
   width: 50%;
@@ -121,4 +121,12 @@ header .container .header-bottom .left .text a {
 header .container .header-bottom .right {
   width: 50%;
   height: 100%;
+}
+header .container .header-bottom .right img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+  -o-object-position: top;
+     object-position: top;
 }

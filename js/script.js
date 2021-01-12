@@ -17,7 +17,11 @@ var header = new Vue(
           type: "fa-bars",
           active: false
         }
-      ]
+      ],
+      mainHeaderImg: {
+        name: "main img",
+        path: "avadabarbers_hero_focalmirror-600x825.png"
+      }
     },
     methods: {
 
