@@ -7,19 +7,34 @@ header {
     @include headerContainer($standardContainerWidth);
 
     .header-top {
+      display: flex;
       height: $headerTopHeight;
-      background-color: yellow;
+
+      .left {
+        @include headerTopChildSet;
+        @include displaySet(row, start, end);
+
+        img {
+
+        }
+      }
+
+      .right {
+        @include headerTopChildSet;
+        @include displaySet(row, end, end);
+      }
     }
 
     .header-bottom {
       display: flex;
       height: $headerBottomHeight;
+
       .left {
-        @include headerBottomChildSet;
+        @include headerTopChildSet;
       }
 
       .right {
-        @include headerBottomChildSet;
+        @include headerTopChildSet;
       }
     }
   }

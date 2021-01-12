@@ -9,7 +9,13 @@
   height: 100%;
   margin: auto;
 }
-@mixin headerBottomChildSet {
+@mixin headerTopChildSet {
   width: 50%;
   height: 100%;
+}
+@mixin displaySet ($direction, $jString, $aString) {
+  display: flex;
+  flex-direction: #{$direction};
+  justify-content: flex-#{$jString};
+  align-items: flex-#{$aString};
 }

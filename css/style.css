@@ -25,8 +25,24 @@ header .container {
   margin: auto;
 }
 header .container .header-top {
+  display: flex;
   height: 90px;
-  background-color: yellow;
+}
+header .container .header-top .left {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-end;
+}
+header .container .header-top .right {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: flex-end;
 }
 header .container .header-bottom {
   display: flex;
