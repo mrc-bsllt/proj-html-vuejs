@@ -1,0 +1,26 @@
+header {
+  height: 100vh;
+  background-image: url("../img/avadabarbers-homepage-hero-bg.jpg");
+  @include backgroundSize;
+
+  .container {
+    @include headerContainer($standardContainerWidth);
+
+    .header-top {
+      height: $headerTopHeight;
+      background-color: yellow;
+    }
+
+    .header-bottom {
+      display: flex;
+      height: $headerBottomHeight;
+      .left {
+        @include headerBottomChildSet;
+      }
+
+      .right {
+        @include headerBottomChildSet;
+      }
+    }
+  }
+}

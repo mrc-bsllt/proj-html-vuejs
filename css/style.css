@@ -2,4 +2,41 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "Lato", sans-serif;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Abril Fatface", cursive;
+}
+
+header {
+  height: 100vh;
+  background-image: url("../img/avadabarbers-homepage-hero-bg.jpg");
+  background-size: cover;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+}
+header .container {
+  width: 60%;
+  height: 100%;
+  margin: auto;
+}
+header .container .header-top {
+  height: 90px;
+  background-color: yellow;
+}
+header .container .header-bottom {
+  display: flex;
+  height: calc(100% - 90px);
+}
+header .container .header-bottom .left {
+  width: 50%;
+  height: 100%;
+}
+header .container .header-bottom .right {
+  width: 50%;
+  height: 100%;
 }

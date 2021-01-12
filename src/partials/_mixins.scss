@@ -1,0 +1,15 @@
+@mixin backgroundSize {
+  background-size: cover;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+}
+@mixin headerContainer ($width) {
+  width: $width;
+  height: 100%;
+  margin: auto;
+}
+@mixin headerBottomChildSet {
+  width: 50%;
+  height: 100%;
+}
