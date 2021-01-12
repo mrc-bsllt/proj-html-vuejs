@@ -30,8 +30,11 @@
           <!-- parte alta destra con il carrello e l'hamburger menu -->
           <div class="right">
             <ul id="icons-list">
-              <li><a href="#"><i class="fas fa-shopping-cart"></i></a></li>
-              <li><a href="#"><i class="fas fa-bars"></i></a></li>
+              <li v-for="icon in navIcons">
+                <a href="#">
+                  <i :class="icon.prefix + icon.type"></i>
+                </a>
+              </li>
             </ul>
           </div>
         </div>
