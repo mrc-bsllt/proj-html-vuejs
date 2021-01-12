@@ -24,7 +24,9 @@ var header = new Vue(
       }
     },
     methods: {
-
+      toogleActiveClass: function(index) {
+        this.navIcons[index].active = !this.navIcons[index].active;
+      }
     }
   }
 );

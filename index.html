@@ -30,9 +30,9 @@
           <!-- parte alta destra con il carrello e l'hamburger menu -->
           <div class="right">
             <ul id="icons-list">
-              <li v-for="icon in navIcons">
+              <li v-for="(icon, index) in navIcons">
                 <a href="#">
-                  <i :class="icon.prefix + icon.type"></i>
+                  <i :class="icon.prefix + icon.type" @click="toogleActiveClass(index)"></i>
                 </a>
               </li>
             </ul>

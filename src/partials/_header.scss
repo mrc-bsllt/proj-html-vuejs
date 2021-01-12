@@ -13,10 +13,6 @@ header {
       .left {
         @include headerTopChildSet;
         @include displaySet(row, flex-start, flex-end);
-
-        img {
-
-        }
       } // .left
 
       .right {
@@ -33,6 +29,7 @@ header {
               i {
                 margin: $iconsMargin;
                 vertical-align: middle;
+                z-index: 2;
                 &:hover {
                   color: $brandColor;
                   transition: $standardTransition;
@@ -53,7 +50,7 @@ header {
     .header-bottom {
       display: flex;
       height: $headerBottomHeight;
-      
+
       .left {
         @include headerTopChildSet;
         @include displaySet(row, flex-start, center);

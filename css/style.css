@@ -83,6 +83,7 @@ header .container .header-top .right #icons-list li {
 header .container .header-top .right #icons-list li a i {
   margin: 15px;
   vertical-align: middle;
+  z-index: 2;
 }
 header .container .header-top .right #icons-list li a i:hover {
   color: #ae8652;
