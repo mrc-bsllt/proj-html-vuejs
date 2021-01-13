@@ -143,7 +143,21 @@
           </div>
         </section>
 
-        <section id="reviews"></section>
+        <section id="reviews">
+          <h4>What people say</h4>
+          <h2>Reviews</h2>
+          <div class="column-section">
+            <div class="container">
+              <div class="column" v-for="user in usersReviews">
+                <div class="content">
+                  <p>{{ user.rev }}</p>
+                  <img :src="'img/' + user.avatar" :alt="user.name">
+                  <h5>{{ user.name }}</h5>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
 
         <section id="blog-posts"></section>
       </main>

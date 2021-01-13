@@ -2,7 +2,30 @@
   position: relative;
   height: 1260px;
   background-color: #ffffff;
+  text-align: center;
+  padding-top: calc(#{$monthsProductHeight} + 100px);
   &::after {
     @include triangleDownLayout(#ffffff);
+  }
+  .container {
+    @include headerContainer($standardContainerWidth);
+    @include displaySet(row, flex-start, stretch);
+    flex-wrap: wrap;
+    .column {
+      width: calc(100% / 3);
+      padding: 60px;
+      .content {
+        p {
+          color: $mainParagrapghColor;
+          font-weight: 300;
+          line-height: 32.4px;
+        }
+        img {
+          width: 120px;
+          margin: 20px 0;
+          border-radius: 50%;
+        }
+      }
+    }
   }
 }

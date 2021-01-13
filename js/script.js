@@ -116,7 +116,25 @@ var app = new Vue(
         name: "Shaving Butter",
         image: "shaving_butter-400x400.png",
         description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque laoreet enim est, vel molestie dolor ultrices ut. Lorem ipsum dolor sit amet, consectetur adipiscing elit."
-      }
+      },
+      usersReviews: [
+        {
+          name: "John Doe",
+          avatar: "avadabarbers-trimcut-gallery6-200x200.jpg",
+          rev: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi mollis eleifend ante ut sagittis. Sed sodales, urna et imperdiet placerat, ex nisi aliquam orci, ac varius odio libero et arcu."
+        },
+        {
+          name: "Pete Jones",
+          avatar: "avadabarbers-trimcut-gallery7-200x201.jpg",
+          rev: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi mollis eleifend ante ut sagittis. Sed sodales, urna et imperdiet placerat, ex nisi aliquam orci, ac varius odio libero et arcu."
+
+        },
+        {
+          name: "Mark Wilson",
+          avatar: "avadabarbers-trimcut-gallery3-200x201.jpg",
+          rev: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi mollis eleifend ante ut sagittis. Sed sodales, urna et imperdiet placerat, ex nisi aliquam orci, ac varius odio libero et arcu."
+        },
+      ]
     }, //fine data
     methods: {
       toogleActiveClass: function(index) {

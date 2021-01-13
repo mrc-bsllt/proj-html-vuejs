@@ -41,7 +41,7 @@
     transform: translateX(-50%);
     @include displaySet(row, flex-start, stretch);
     width: 60%;
-    height: 460px;
+    height: $monthsProductHeight;
     background-color: $footerTopBgColor;
     border-top: 3px solid $brandColor;
     z-index: 2;

@@ -34,6 +34,12 @@ h4 {
   font-weight: 900;
 }
 
+h5 {
+  color: #ae8652;
+  font-size: 18px;
+  font-style: italic;
+}
+
 ul {
   list-style: none;
 }
@@ -419,6 +425,8 @@ header .hamburger-layover #nav-list li a:hover {
   position: relative;
   height: 1260px;
   background-color: #ffffff;
+  text-align: center;
+  padding-top: calc(460px + 100px);
 }
 #reviews::after {
   content: "";
@@ -431,6 +439,30 @@ header .hamburger-layover #nav-list li a:hover {
   border-left: 950px solid transparent;
   border-right: 950px solid transparent;
   border-bottom: 100px solid #ffffff;
+}
+#reviews .container {
+  width: 60%;
+  height: 100%;
+  margin: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: stretch;
+  flex-wrap: wrap;
+}
+#reviews .container .column {
+  width: calc(100% / 3);
+  padding: 60px;
+}
+#reviews .container .column .content p {
+  color: #505050;
+  font-weight: 300;
+  line-height: 32.4px;
+}
+#reviews .container .column .content img {
+  width: 120px;
+  margin: 20px 0;
+  border-radius: 50%;
 }
 
 #blog-posts {
