@@ -79,6 +79,16 @@ main {
   padding: 50px;
 }
 
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.5s;
+}
+
+.fade-enter,
+.fade-leave-to {
+  opacity: 0;
+}
+
 header {
   height: 100vh;
   background-image: url("../img/avadabarbers-homepage-hero-bg.jpg");
@@ -94,6 +104,7 @@ header .header-top {
   left: 0;
   width: 100%;
   height: 95px;
+  z-index: 2;
 }
 header .header-top .container {
   width: 60%;

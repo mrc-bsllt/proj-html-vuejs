@@ -10,11 +10,13 @@ var app = new Vue(
         {
           prefix: "fas ",
           type: "fa-shopping-cart",
+          close: "fa-times",
           active: false
         },
         {
           prefix: "fas ",
           type: "fa-bars",
+          close: "fa-times",
           active: false
         }
       ],
@@ -114,7 +116,7 @@ var app = new Vue(
     methods: {
       toogleActiveClass: function(index) {
         this.navIcons[index].active = !this.navIcons[index].active;
-      }
-    }
+      } //fine funzione
+    } //methods
   }
 );

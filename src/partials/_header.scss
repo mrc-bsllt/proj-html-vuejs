@@ -10,6 +10,7 @@ header {
     left: 0;
     width: 100%;
     height: $headerTopHeight;
+    z-index: 2;
     //background-color: rgba(0, 0, 0, 0.7);
 
     .container {

@@ -64,11 +64,15 @@
           </a>
         </div>
 
-        <div v-if="navIcons[1].active" class="hamburger-layover">
-          <ul id="nav-list">
-            <li v-for="link in navLinks"><a href="#">{{ link }}</a></li>
-          </ul>
-        </div>
+        <transition name="fade">
+          <div v-if="navIcons[1].active" class="hamburger-layover">
+            <ul id="nav-list">
+              <li v-for="link in navLinks">
+                <a href="#">{{ link }}</a>
+              </li>
+            </ul>
+          </div>
+        </transition>
       </header>
       <!-- /header -->
 
