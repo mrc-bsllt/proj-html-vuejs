@@ -5,11 +5,6 @@
   font-family: "Lato", sans-serif;
 }
 
-main {
-  margin-bottom: 600px;
-  overflow-x: hidden;
-}
-
 h1,
 h2,
 h3 {
@@ -72,6 +67,16 @@ a {
   margin: 5px 0;
   background-color: #ffffff;
   border-radius: 5px;
+}
+
+main {
+  margin-bottom: 600px;
+  overflow-x: hidden;
+}
+
+#services,
+#avada-grooming-products {
+  padding: 50px;
 }
 
 header {
@@ -214,6 +219,7 @@ header .aside a p {
   width: 100%;
   height: 100vh;
   background-color: #ffffff;
+  text-align: center;
 }
 #services::before {
   content: "";
@@ -231,10 +237,6 @@ header .aside a p {
   width: 60%;
   height: 100%;
   margin: auto;
-}
-#services .container .text {
-  padding: 70px 0;
-  text-align: center;
 }
 #services .container .column-section {
   display: flex;
@@ -263,9 +265,6 @@ header .aside a p {
   font-weight: 300;
   line-height: 32.4px;
 }
-#services .container .service-link {
-  text-align: center;
-}
 
 #avada-grooming-products {
   position: relative;
@@ -276,6 +275,7 @@ header .aside a p {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-position: top;
+  text-align: center;
 }
 #avada-grooming-products::before {
   content: "";
@@ -288,6 +288,32 @@ header .aside a p {
   border-left: 950px solid transparent;
   border-right: 950px solid transparent;
   border-bottom: 100px solid #121314;
+}
+#avada-grooming-products .column-section {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: stretch;
+}
+#avada-grooming-products .column-section .column {
+  width: calc(100% / 4);
+  padding: 50px 100px;
+}
+#avada-grooming-products .column-section .column .content {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+}
+#avada-grooming-products .column-section .column .content img {
+  width: 450px;
+}
+#avada-grooming-products .column-section .column .content p {
+  margin: 10px 0;
+  color: #ae8652;
+  font-weight: 300;
+  font-size: 18px;
 }
 
 #reviews {

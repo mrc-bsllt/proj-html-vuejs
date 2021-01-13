@@ -3,17 +3,13 @@
   width: 100%;
   height: 100vh;
   background-color: #ffffff;
+  text-align: center;
   &::before {
     @include triangleUpLayout(#ffffff);
   }
 
   .container {
     @include headerContainer($standardContainerWidth);
-
-    .text {
-      padding: 70px 0;
-      text-align: center;
-    }
 
     .column-section {
       @include displaySet(row, flex-start, stretch);
@@ -42,8 +38,5 @@
         } // content
       } // column
     } // column-section
-    .service-link {
-      text-align: center;
-    }
   } // container
 } // Services

@@ -78,7 +78,32 @@ var app = new Vue(
           social: "fa-instagram",
           prefix: "fab ",
         },
-      ]
+      ],
+      productsList: [
+        {
+          name: "Brush",
+          image: "brush_dark-800x800.webp",
+          price: "&#36;15.00"
+        },
+        {
+          name: "Scissors",
+          image: "scissors-600x600.webp",
+          price: "&#36;85.00"
+
+        },
+        {
+          name: "Hot oil",
+          image: "hot_oil_dark-400x400.webp",
+          price: "&#36;15.00"
+
+        },
+        {
+          name: "Straight Razor",
+          image: "straight_razor_dark-600x600.webp",
+          price: "&#36;30.00"
+
+        },
+      ],
     }, //fine data
     methods: {
       toogleActiveClass: function(index) {

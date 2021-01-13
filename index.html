@@ -81,10 +81,8 @@
         <section id="services">
           <div class="container">
 
-            <div class="text">
-              <h4>Mens grooming</h4>
-              <h2>Services</h2>
-            </div>
+            <h4>Mens grooming</h4>
+            <h2>Services</h2>
 
             <div class="column-section">
               <div v-for="column in columnService" class="column">
@@ -96,14 +94,28 @@
               </div>
             </div>
 
-            <div class="service-link">
-              <a class="btn" href="#">Read about our services</a>
-            </div>
+            <a class="btn" href="#">Read about our services</a>
 
           </div>
         </section>
 
-        <section id="avada-grooming-products"></section>
+        <section id="avada-grooming-products">
+          <h4>We have you covered</h4>
+          <h2>Avada Grooming Products</h2>
+
+          <div class="column-section">
+            <div class="column" v-for="product in productsList">
+              <div class="content">
+                <img :src="'img/' + product.image" :alt="product.name">
+                <h3>{{ product.name }}</h3>
+                <p>{{ product.price }}</p>
+              </div>
+            </div>
+          </div>
+
+          <a class="btn" href="#">Shop our product range</a>
+
+        </section>
 
         <section id="reviews"></section>
 

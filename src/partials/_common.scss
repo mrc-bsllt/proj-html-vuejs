@@ -4,10 +4,6 @@
   box-sizing: border-box;
   font-family: 'Lato', sans-serif;
 }
-main {
-  margin-bottom: $footerHeight;
-  overflow-x: hidden;
-}
 h1,
 h2,
 h3 {
@@ -54,4 +50,12 @@ a {
   margin: 5px 0;
   background-color: #ffffff;
   border-radius: 5px;
+}
+main {
+  margin-bottom: $footerHeight;
+  overflow-x: hidden;
+}
+#services,
+#avada-grooming-products {
+  padding: 50px;
 }
