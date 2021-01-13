@@ -1,0 +1,10 @@
+#avada-grooming-products {
+  position: relative;
+  height: 1070px;
+  background-image: url("../img/avadabarbers-reviewsbackground.jpg");
+  @include backgroundSize;
+  background-position: top;
+  &::before {
+    @include triangleUpLayout(#121314);
+  }
+}

@@ -1,0 +1,13 @@
+#pro-barbers {
+  @include displaySet(column, center, center);
+  @include backgroundSize;
+  height: 560px;
+  padding-bottom: $triangleHeight;
+  background-image: url("../img/avadabarbers-about-introbackground.jpg");
+  background-position: top;
+
+  h2 {
+    margin-bottom: 40px;
+  }
+
+}

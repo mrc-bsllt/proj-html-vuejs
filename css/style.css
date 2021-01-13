@@ -5,6 +5,11 @@
   font-family: "Lato", sans-serif;
 }
 
+main {
+  margin-bottom: 600px;
+  overflow-x: hidden;
+}
+
 h1,
 h2,
 h3 {
@@ -186,11 +191,7 @@ header .aside a p {
   color: #4f659a;
 }
 
-main {
-  margin-bottom: 600px;
-  overflow-x: hidden;
-}
-main #pro-barbers {
+#pro-barbers {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -204,16 +205,17 @@ main #pro-barbers {
   background-image: url("../img/avadabarbers-about-introbackground.jpg");
   background-position: top;
 }
-main #pro-barbers h2 {
+#pro-barbers h2 {
   margin-bottom: 40px;
 }
-main #services {
+
+#services {
   position: relative;
   width: 100%;
   height: 100vh;
   background-color: #ffffff;
 }
-main #services::before {
+#services::before {
   content: "";
   position: absolute;
   top: -100px;
@@ -225,46 +227,47 @@ main #services::before {
   border-right: 950px solid transparent;
   border-bottom: 100px solid #ffffff;
 }
-main #services .container {
+#services .container {
   width: 60%;
   height: 100%;
   margin: auto;
 }
-main #services .container .text {
+#services .container .text {
   padding: 70px 0;
   text-align: center;
 }
-main #services .container .column-section {
+#services .container .column-section {
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
   align-items: stretch;
   flex-wrap: wrap;
 }
-main #services .container .column-section .column {
+#services .container .column-section .column {
   width: calc(100% / 3);
   padding: 50px;
 }
-main #services .container .column-section .column .content {
+#services .container .column-section .column .content {
   width: 100%;
   text-align: center;
 }
-main #services .container .column-section .column .content img {
+#services .container .column-section .column .content img {
   height: 110px;
 }
-main #services .container .column-section .column .content h3 {
+#services .container .column-section .column .content h3 {
   margin: 20px 0;
 }
-main #services .container .column-section .column .content p {
+#services .container .column-section .column .content p {
   font-size: 18px;
   color: #505050;
   font-weight: 300;
   line-height: 32.4px;
 }
-main #services .container .service-link {
+#services .container .service-link {
   text-align: center;
 }
-main #avada-grooming-products {
+
+#avada-grooming-products {
   position: relative;
   height: 1070px;
   background-image: url("../img/avadabarbers-reviewsbackground.jpg");
@@ -274,7 +277,7 @@ main #avada-grooming-products {
   -o-background-size: cover;
   background-position: top;
 }
-main #avada-grooming-products::before {
+#avada-grooming-products::before {
   content: "";
   position: absolute;
   top: -100px;
@@ -286,12 +289,13 @@ main #avada-grooming-products::before {
   border-right: 950px solid transparent;
   border-bottom: 100px solid #121314;
 }
-main #reviews {
+
+#reviews {
   position: relative;
   height: 1260px;
   background-color: #ffffff;
 }
-main #reviews::after {
+#reviews::after {
   content: "";
   position: absolute;
   bottom: -100px;
@@ -303,7 +307,8 @@ main #reviews::after {
   border-right: 950px solid transparent;
   border-bottom: 100px solid #ffffff;
 }
-main #blog-posts {
+
+#blog-posts {
   height: 1100px;
   background-color: #eae8e6;
 }

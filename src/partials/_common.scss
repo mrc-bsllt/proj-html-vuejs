@@ -4,6 +4,10 @@
   box-sizing: border-box;
   font-family: 'Lato', sans-serif;
 }
+main {
+  margin-bottom: $footerHeight;
+  overflow-x: hidden;
+}
 h1,
 h2,
 h3 {
