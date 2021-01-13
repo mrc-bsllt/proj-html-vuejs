@@ -320,6 +320,25 @@ footer .footer-top {
   height: calc(600px - 100px);
   background-color: #111110;
 }
+footer .footer-top .container {
+  width: 60%;
+  height: 100%;
+  margin: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: stretch;
+}
+footer .footer-top .container .column {
+  width: calc(100% / 3);
+  padding: 50px;
+  background-color: red;
+}
+footer .footer-top .container .column .content {
+  width: 100%;
+  height: 100%;
+  background-color: white;
+}
 footer .footer-bottom {
   height: 100px;
   background-color: #191817;

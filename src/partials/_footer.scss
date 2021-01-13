@@ -9,6 +9,23 @@ footer {
   .footer-top {
     height: calc(#{$footerHeight} - #{$footerBottomHeight});
     background-color: $footerTopBgColor;
+
+    .container {
+      @include headerContainer($standardContainerWidth);
+      @include displaySet(row, flex-start, stretch);
+
+      .column {
+        width: calc(100% / 3);
+        padding: 50px;
+        background-color: red;
+
+        .content {
+          width: 100%;
+          height: 100%;
+          background-color: white;
+        }
+      }
+    }
   }
 
   .footer-bottom {
