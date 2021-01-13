@@ -315,6 +315,7 @@ header .hamburger-layover #nav-list li a:hover {
 
 #avada-grooming-products {
   position: relative;
+  width: 100%;
   height: 1070px;
   background-image: url("../img/avadabarbers-reviewsbackground.jpg");
   background-size: cover;
@@ -361,6 +362,37 @@ header .hamburger-layover #nav-list li a:hover {
   color: #ae8652;
   font-weight: 300;
   font-size: 18px;
+}
+#avada-grooming-products #months-product {
+  position: absolute;
+  bottom: -410px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: stretch;
+  width: 60%;
+  height: 460px;
+  background-color: #111110;
+  border-top: 3px solid #ae8652;
+  z-index: 2;
+}
+#avada-grooming-products #months-product .left {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 40%;
+  background-image: url("../img/avadabarbers-cta-background.jpg");
+  background-size: cover;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-position: center;
+}
+#avada-grooming-products #months-product .right {
+  width: 60%;
 }
 
 #reviews {
