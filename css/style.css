@@ -187,6 +187,7 @@ header .aside a p {
 }
 
 main {
+  margin-bottom: 600px;
   overflow-x: hidden;
 }
 main #pro-barbers {
@@ -210,6 +211,7 @@ main #services {
   position: relative;
   width: 100%;
   height: 100vh;
+  background-color: #ffffff;
 }
 main #services::before {
   content: "";
@@ -283,4 +285,42 @@ main #avada-grooming-products::before {
   border-left: 950px solid transparent;
   border-right: 950px solid transparent;
   border-bottom: 100px solid #121314;
+}
+main #reviews {
+  position: relative;
+  height: 1260px;
+  background-color: #ffffff;
+}
+main #reviews::after {
+  content: "";
+  position: absolute;
+  bottom: -100px;
+  left: 50%;
+  transform: translatex(-50%) rotate(180deg);
+  width: 0;
+  height: 0;
+  border-left: 950px solid transparent;
+  border-right: 950px solid transparent;
+  border-bottom: 100px solid #ffffff;
+}
+main #blog-posts {
+  height: 1100px;
+  background-color: #eae8e6;
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 600px;
+  z-index: -1;
+}
+footer .footer-top {
+  height: calc(600px - 100px);
+  background-color: #111110;
+}
+footer .footer-bottom {
+  height: 100px;
+  background-color: #191817;
 }

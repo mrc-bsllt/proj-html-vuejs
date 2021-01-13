@@ -1,0 +1,18 @@
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: $footerHeight;
+  z-index: -1;
+
+  .footer-top {
+    height: calc(#{$footerHeight} - #{$footerBottomHeight});
+    background-color: $footerTopBgColor;
+  }
+
+  .footer-bottom {
+    height: $footerBottomHeight;
+    background-color: $footerBottomBgColor;
+  }
+}

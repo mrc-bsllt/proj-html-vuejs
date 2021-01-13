@@ -1,4 +1,5 @@
 main {
+  margin-bottom: $footerHeight;
   overflow-x: hidden;
 
   #pro-barbers {
@@ -18,8 +19,9 @@ main {
     position: relative;
     width: 100%;
     height: 100vh;
+    background-color: #ffffff;
     &::before {
-      @include triangleLayout(#ffffff);
+      @include triangleUpLayout(#ffffff);
     }
 
     .container {
@@ -70,8 +72,22 @@ main {
     @include backgroundSize;
     background-position: top;
     &::before {
-      @include triangleLayout(#121314);
+      @include triangleUpLayout(#121314);
     }
   } //avada-grooming-products
+
+  #reviews {
+    position: relative;
+    height: 1260px;
+    background-color: #ffffff;
+    &::after {
+      @include triangleDownLayout(#ffffff);
+    }
+  }
+
+  #blog-posts {
+    height: 1100px;
+    background-color: $blogSectionColor;
+  }
 
 } // main
