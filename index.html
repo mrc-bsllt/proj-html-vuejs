@@ -114,18 +114,45 @@
         <div class="footer-top">
           <div class="container">
             <div class="column">
-              <div class="content"></div>
+              <div class="content">
+                <img src="img/avadabarbers_footer_shop_image-300x234.png" alt="foto shop">
+                <a class="btn" href="#">Shop our range now</a>
+              </div>
             </div>
+
             <div class="column">
-              <div class="content"></div>
+              <div class="content">
+                <a id="logo" href="#">
+                  <img :src="'img/' + logoImg.path" :alt="logoImg.name">
+                </a>
+                <div class="corporate-data">
+                  <p v-for="data in corporateData">{{ data }}</p>
+                </div>
+                <h4>Follow us</h4>
+                <ul id="social">
+                  <li v-for="page in socialPages">
+                    <a href="#">
+                      <i :class="page.prefix + page.social"></i>
+                    </a>
+                  </li>
+                </ul>
+              </div>
             </div>
+
             <div class="column">
-              <div class="content"></div>
+              <div class="content">
+                <img src="img/avadabarbers_footer_appointment_image-300x234.png" alt="appointment">
+                <a class="btn" href="#">Book your appointment</a>
+              </div>
             </div>
           </div>
         </div>
 
-        <div class="footer-bottom"></div>
+        <div class="footer-bottom">
+          <p>
+            © Copyright 2012 - 2021 | Avada Theme by <a href="#">ThemeFusion</a> | All Rights Reserved | Powered by <a href="#">WordPress</a>
+          </p>
+        </div>
       </footer>
 
     </div>

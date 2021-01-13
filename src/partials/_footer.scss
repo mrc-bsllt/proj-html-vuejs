@@ -17,19 +17,57 @@ footer {
       .column {
         width: calc(100% / 3);
         padding: 50px;
-        background-color: red;
+        &:nth-child(2) {
+
+          a#logo {
+            margin: 0;
+          }
+          .corporate-data {
+            @include displaySet(column, flex-start, center);
+            margin: 40px 0;
+            color: $mainParagrapghColor;
+            line-height: 22px;
+          }
+
+          #social {
+            @include displaySet(row, center, stretch);
+            li {
+              margin: 0 8px;
+              i:hover {
+                color: darken($standardTextColor, 15%);
+                transition: $standardTransition;
+              }
+            } // li
+          } // social
+        } // &:nth-child(2)
 
         .content {
+          @include displaySet(column, flex-start, center);
           width: 100%;
-          height: 100%;
-          background-color: white;
-        }
-      }
-    }
-  }
+
+          a {
+            margin: 40px 0;
+            font-size: 14px;
+          }
+        } //content
+      } // column
+    } // container
+  } // footer-top
 
   .footer-bottom {
     height: $footerBottomHeight;
+    line-height: $footerBottomHeight;
     background-color: $footerBottomBgColor;
+    color: $footerBottomColor;
+    font-weight: 300;
+    text-align: center;
+
+    a {
+      color: $footerBottomColor;
+      &:hover {
+        color: $brandColor;
+        transition: $standardTransition;
+      }
+    }
   }
 }

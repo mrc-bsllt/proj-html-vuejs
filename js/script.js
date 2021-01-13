@@ -54,6 +54,31 @@ var app = new Vue(
 
         }
       ],
+      corporateData: [
+        "Avada Barbers",
+        "123 New York Street",
+        "New York City",
+        "info@yourwebsite.com",
+        "+1 (555) 555-1212",
+      ],
+      socialPages: [
+        {
+          social: "fa-facebook-f",
+          prefix: "fab ",
+        },
+        {
+          social: "fa-twitter",
+          prefix: "fab ",
+        },
+        {
+          social: "fa-youtube",
+          prefix: "fab ",
+        },
+        {
+          social: "fa-instagram",
+          prefix: "fab ",
+        },
+      ]
     }, //fine data
     methods: {
       toogleActiveClass: function(index) {
