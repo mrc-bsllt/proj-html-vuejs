@@ -1,7 +1,7 @@
 #pro-barbers {
   @include displaySet(column, center, center);
   @include backgroundSize;
-  height: 560px;
+  @include setWH(inherit, 560px);
   padding-bottom: $triangleHeight;
   background-image: url("../img/avadabarbers-about-introbackground.jpg");
   background-position: top;

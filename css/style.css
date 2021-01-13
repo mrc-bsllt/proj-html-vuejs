@@ -96,6 +96,7 @@ main {
 }
 
 header {
+  width: none;
   height: 100vh;
   background-image: url("../img/avadabarbers-homepage-hero-bg.jpg");
   background-size: cover;
@@ -117,6 +118,9 @@ header .header-top .container {
   height: 100%;
   margin: auto;
   display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: stretch;
 }
 header .header-top .container .left {
   width: 50%;
@@ -140,7 +144,6 @@ header .header-top .container .right #icons-list li {
 header .header-top .container .right #icons-list li a i {
   margin: 15px;
   vertical-align: middle;
-  z-index: 2;
 }
 header .header-top .container .right #icons-list li a i:hover {
   color: #ae8652;
@@ -153,6 +156,7 @@ header .header-top .container .right #icons-list li a i.fa-bars {
   font-size: 27px;
 }
 header .header-bottom {
+  width: none;
   height: calc(100% - 95px);
   padding-top: 95px;
 }
@@ -161,6 +165,9 @@ header .header-bottom .container {
   height: 100%;
   margin: auto;
   display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: stretch;
 }
 header .header-bottom .container .left {
   width: 50%;
@@ -172,6 +179,7 @@ header .header-bottom .container .left {
 }
 header .header-bottom .container .left .text hr {
   width: 250px;
+  height: none;
   margin: 30px 0;
   border: 2px solid #ae8652;
 }
@@ -232,6 +240,7 @@ header .hamburger-layover {
   z-index: 1;
 }
 header .hamburger-layover #nav-list {
+  width: none;
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -258,6 +267,7 @@ header .hamburger-layover #nav-list li a:hover {
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
+  width: none;
   height: 560px;
   padding-bottom: 100px;
   background-image: url("../img/avadabarbers-about-introbackground.jpg");
@@ -304,9 +314,11 @@ header .hamburger-layover #nav-list li a:hover {
 }
 #services .container .column-section .column .content {
   width: 100%;
+  height: none;
   text-align: center;
 }
 #services .container .column-section .column .content img {
+  width: none;
   height: 110px;
 }
 #services .container .column-section .column .content h3 {
@@ -359,9 +371,11 @@ header .hamburger-layover #nav-list li a:hover {
   justify-content: flex-start;
   align-items: center;
   width: 100%;
+  height: none;
 }
 #avada-grooming-products .column-section .column .content img {
   width: 450px;
+  height: none;
 }
 #avada-grooming-products .column-section .column .content p {
   margin: 10px 0;
@@ -390,6 +404,7 @@ header .hamburger-layover #nav-list li a:hover {
   justify-content: center;
   align-items: center;
   width: 40%;
+  height: none;
   background-image: url("../img/avadabarbers-cta-background.jpg");
   background-size: cover;
   -webkit-background-size: cover;
@@ -400,6 +415,7 @@ header .hamburger-layover #nav-list li a:hover {
 #avada-grooming-products #months-product .right {
   position: relative;
   width: 60%;
+  height: none;
   text-align: left;
 }
 #avada-grooming-products #months-product .right .content {
@@ -408,6 +424,7 @@ header .hamburger-layover #nav-list li a:hover {
   left: 50%;
   transform: translate(-50%, -50%);
   width: 72%;
+  height: none;
 }
 #avada-grooming-products #months-product .right .content h2 {
   margin: 5px 0 30px 0;
@@ -460,11 +477,13 @@ header .hamburger-layover #nav-list li a:hover {
 }
 #reviews .container .column .content img {
   width: 120px;
+  height: none;
   margin: 20px 0;
   border-radius: 50%;
 }
 
 #blog-posts {
+  width: none;
   height: 1100px;
   background-color: #eae8e6;
 }
@@ -525,12 +544,14 @@ footer .footer-top .container .column .content {
   justify-content: flex-start;
   align-items: center;
   width: 100%;
+  height: none;
 }
 footer .footer-top .container .column .content a {
   margin: 40px 0;
   font-size: 14px;
 }
 footer .footer-bottom {
+  width: none;
   height: 100px;
   line-height: 100px;
   background-color: #191817;

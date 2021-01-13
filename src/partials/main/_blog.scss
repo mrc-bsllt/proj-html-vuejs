@@ -1,4 +1,4 @@
 #blog-posts {
-  height: 1100px;
+  @include setWH(inherit, 1100px);
   background-color: $blogSectionColor;
 }

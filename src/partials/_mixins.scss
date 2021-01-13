@@ -4,6 +4,10 @@
   -moz-background-size: cover;
   -o-background-size: cover;
 }
+@mixin setWH($width, $height) {
+  width: $width;
+  height: $height;
+}
 @mixin headerContainer($width) {
   width: $width;
   height: 100%;

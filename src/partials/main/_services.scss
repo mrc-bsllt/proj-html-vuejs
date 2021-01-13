@@ -1,7 +1,6 @@
 #services {
   position: relative;
-  width: 100%;
-  height: 100vh;
+  @include setWH(100%, 100vh);
   background-color: #ffffff;
   text-align: center;
   &::before {
@@ -16,10 +15,10 @@
         width: calc(100% / 3);
         padding: 50px;
         .content {
-          width: 100%;
+          @include setWH(100%, none);
           text-align: center;
           img {
-            height: 110px;
+            @include setWH(none, 110px);
           }
           h3 {
             margin: 20px 0;

@@ -1,7 +1,6 @@
 footer {
   @include position(fixed, bottom, 0, left, 0);
-  width: 100%;
-  height: $footerHeight;
+  @include setWH(100%, $footerHeight);
   z-index: -1;
   .footer-top {
     height: calc(#{$footerHeight} - #{$footerBottomHeight});
@@ -37,7 +36,7 @@ footer {
 
         .content {
           @include displaySet(column, flex-start, center);
-          width: 100%;
+          @include setWH(100%, none);
 
           a {
             margin: 40px 0;
@@ -49,7 +48,7 @@ footer {
   } // footer-top
 
   .footer-bottom {
-    height: $footerBottomHeight;
+    @include setWH(none, $footerBottomHeight);
     line-height: $footerBottomHeight;
     background-color: $footerBottomBgColor;
     color: $footerBottomColor;

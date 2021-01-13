@@ -20,7 +20,7 @@
           line-height: 32.4px;
         }
         img {
-          width: 120px;
+          @include setWH(120px, none);
           margin: 20px 0;
           border-radius: 50%;
         }
