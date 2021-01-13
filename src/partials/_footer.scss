@@ -1,24 +1,18 @@
 footer {
-  position: fixed;
-  bottom: 0;
-  left: 0;
+  @include position(fixed, bottom, 0, left, 0);
   width: 100%;
   height: $footerHeight;
   z-index: -1;
-
   .footer-top {
     height: calc(#{$footerHeight} - #{$footerBottomHeight});
     background-color: $footerTopBgColor;
-
     .container {
       @include headerContainer($standardContainerWidth);
       @include displaySet(row, flex-start, stretch);
-
       .column {
         width: calc(100% / 3);
         padding: 50px;
         &:nth-child(2) {
-
           a#logo {
             margin: 0;
           }

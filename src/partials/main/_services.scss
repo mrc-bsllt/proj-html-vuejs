@@ -7,22 +7,17 @@
   &::before {
     @include triangleUpLayout(#ffffff);
   }
-
   .container {
     @include headerContainer($standardContainerWidth);
-
     .column-section {
       @include displaySet(row, flex-start, stretch);
       flex-wrap: wrap;
-
       .column {
         width: calc(100% / 3);
         padding: 50px;
-
         .content {
           width: 100%;
           text-align: center;
-
           img {
             height: 110px;
           }

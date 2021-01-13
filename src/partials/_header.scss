@@ -5,26 +5,20 @@ header {
   background-position: top;
 
   .header-top {
-    position: fixed;
-    top: 0;
-    left: 0;
+    @include position(fixed, top, 0, left, 0);
     width: 100%;
     height: $headerTopHeight;
     z-index: 2;
-    
     .container {
       @include headerContainer($standardContainerWidth);
       display: flex;
-
       .left {
         @include headerTopChildSet;
         @include displaySet(row, flex-start, center);
       } // .left
-
       .right {
         @include headerTopChildSet;
         @include displaySet(row, flex-end, center);
-
         #icons-list {
           li {
             display: inline-block;
@@ -89,9 +83,7 @@ header {
   } //.header-bottom
 
   .aside {
-    position: absolute;
-    top: 0;
-    right: 0;
+    @include position(absolute, top, 0, right, 0);
     @include displaySet(column, flex-start, center);
     width: 100px;
     height: 100%;
@@ -112,9 +104,7 @@ header {
   } // aside
 
   .hamburger-layover {
-    position: fixed;
-    top: 0;
-    left: 0;
+    @include position(fixed, top, 0, right, 0);
     width: 100%;
     height: 100vh;
     background-color: rgba(0, 0, 0, 0.7);

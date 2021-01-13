@@ -56,3 +56,8 @@
   border-right: 950px solid transparent;
   border-bottom: $triangleHeight solid $color;
 }
+@mixin position($pos, $y, $yVal, $x, $xVal) {
+  position: #{$pos};
+  #{$y}: #{$yVal};
+  #{$x}: #{$xVal};
+}

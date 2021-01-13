@@ -1,6 +1,5 @@
 #reviews {
   position: relative;
-  height: 1260px;
   background-color: #ffffff;
   text-align: center;
   padding-top: calc(#{$monthsProductHeight} + 100px);
@@ -9,7 +8,7 @@
   }
   .container {
     @include headerContainer($standardContainerWidth);
-    @include displaySet(row, flex-start, stretch);
+    @include displaySet(row, space-around, stretch);
     flex-wrap: wrap;
     .column {
       width: calc(100% / 3);

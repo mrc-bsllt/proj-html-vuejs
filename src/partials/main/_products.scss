@@ -9,18 +9,14 @@
   &::before {
     @include triangleUpLayout(#121314);
   }
-
   .column-section {
     @include displaySet(row, flex-start, stretch);
-
     .column {
       width: calc(100% / 4);
       padding: 50px 100px;
-
       .content {
         @include displaySet(column, flex-start, center);
         width: 100%;
-
         img {
           width: 450px;
         }
@@ -35,9 +31,7 @@
   }
 
   #months-product {
-    position: absolute;
-    bottom: -410px;
-    left: 50%;
+    @include position(absolute, bottom, -410px, left, 50%);
     transform: translateX(-50%);
     @include displaySet(row, flex-start, stretch);
     width: 60%;
@@ -57,9 +51,7 @@
       width: 60%;
       text-align: left;
       .content {
-        position: absolute;
-        top: 50%;
-        left: 50%;
+        @include position(absolute, top, 50%, left, 50%);
         transform: translate(-50%, -50%);
         width: 72%;
         h2 {
