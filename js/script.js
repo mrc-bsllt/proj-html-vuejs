@@ -18,6 +18,15 @@ var app = new Vue(
           active: false
         }
       ],
+      navLinks: [
+        "Home",
+        "About Us",
+        "Services",
+        "Shop",
+        "Our Team",
+        "Blog",
+        "Contact Us"
+      ],
       mainHeaderImg: {
         name: "main img",
         path: "avadabarbers_hero_focalmirror-600x825.png"
@@ -89,19 +98,16 @@ var app = new Vue(
           name: "Scissors",
           image: "scissors-600x600.webp",
           price: "85.00"
-
         },
         {
           name: "Hot oil",
           image: "hot_oil_dark-400x400.webp",
           price: "15.00"
-
         },
         {
           name: "Straight Razor",
           image: "straight_razor_dark-600x600.webp",
           price: "30.00"
-
         },
       ],
     }, //fine data

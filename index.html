@@ -18,17 +18,14 @@
 
       <!-- header -->
       <header>
-        <div class="container">
 
-          <!-- header top -->
-          <div class="header-top">
+        <div class="header-top">
+          <div class="container">
 
-            <!-- parte alta sinistra del header con il logo -->
             <div class="left">
               <a href="#"><img :src="'img/' + logoImg.path" :alt="logoImg.name"></a>
             </div>
 
-            <!-- parte alta destra con il carrello e l'hamburger menu -->
             <div class="right">
               <ul id="icons-list">
                 <li v-for="(icon, index) in navIcons">
@@ -39,11 +36,11 @@
               </ul>
             </div>
           </div>
+        </div>
 
-          <!-- header bottom -->
-          <div class="header-bottom">
+        <div class="header-bottom">
+          <div class="container">
 
-            <!-- parte bassa sinistra del header con il titolo grande e il bottone -->
             <div class="left">
               <div class="text">
                 <h1>Barber Shop</h1>
@@ -53,13 +50,11 @@
               </div>
             </div>
 
-            <!-- parte bassa destra del header con la foto grande -->
             <div class="right">
               <img
               :src="'img/' + mainHeaderImg.path" :alt="mainHeaderImg.name">
             </div>
           </div>
-
         </div>
 
         <div class="aside">
@@ -68,8 +63,15 @@
             <p>{{ item.text }}</p>
           </a>
         </div>
+
+        <div v-if="navIcons[1].active" class="hamburger-layover">
+          <ul id="nav-list">
+            <li v-for="link in navLinks"><a href="#">{{ link }}</a></li>
+          </ul>
+        </div>
       </header>
       <!-- /header -->
+
 
       <main>
         <section id="pro-barbers">
