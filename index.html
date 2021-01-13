@@ -14,118 +14,121 @@
     <title>Avada Barbers</title>
   </head>
   <body>
+    <div id="app">
 
-    <!-- header -->
-    <header>
-      <div class="container">
+      <!-- header -->
+      <header>
+        <div class="container">
 
-        <!-- header top -->
-        <div class="header-top">
+          <!-- header top -->
+          <div class="header-top">
 
-          <!-- parte alta sinistra del header con il logo -->
-          <div class="left">
-            <a href="#"><img :src="'img/' + logoImg.path" :alt="logoImg.name"></a>
-          </div>
+            <!-- parte alta sinistra del header con il logo -->
+            <div class="left">
+              <a href="#"><img :src="'img/' + logoImg.path" :alt="logoImg.name"></a>
+            </div>
 
-          <!-- parte alta destra con il carrello e l'hamburger menu -->
-          <div class="right">
-            <ul id="icons-list">
-              <li v-for="(icon, index) in navIcons">
-                <a href="#">
-                  <i :class="icon.prefix + icon.type" @click="toogleActiveClass(index)"></i>
-                </a>
-              </li>
-            </ul>
-          </div>
-        </div>
-
-        <!-- header bottom -->
-        <div class="header-bottom">
-
-          <!-- parte bassa sinistra del header con il titolo grande e il bottone -->
-          <div class="left">
-            <div class="text">
-              <h1>Barber Shop</h1>
-              <hr>
-              <p>The Pinnacle of Male Grooming</p>
-              <a class="btn" href="#">Learn more</a>
+            <!-- parte alta destra con il carrello e l'hamburger menu -->
+            <div class="right">
+              <ul id="icons-list">
+                <li v-for="(icon, index) in navIcons">
+                  <a href="#">
+                    <i :class="icon.prefix + icon.type" @click="toogleActiveClass(index)"></i>
+                  </a>
+                </li>
+              </ul>
             </div>
           </div>
 
-          <!-- parte bassa destra del header con la foto grande -->
-          <div class="right">
-            <img
-            :src="'img/' + mainHeaderImg.path" :alt="mainHeaderImg.name">
-          </div>
-        </div>
+          <!-- header bottom -->
+          <div class="header-bottom">
 
-      </div>
-
-      <div class="aside">
-        <a v-for="item in asideItem" class="square" href="#">
-          <i :class="item.icon"></i>
-          <p>{{ item.text }}</p>
-        </a>
-      </div>
-    </header>
-    <!-- /header -->
-
-    <main>
-      <section id="pro-barbers">
-        <h4>award winning</h4>
-        <h2>Pro Barbers</h2>
-        <a class="btn" href="#">Meet your new barber</a>
-      </section>
-
-      <section id="services">
-        <div class="container">
-
-          <div class="text">
-            <h4>Mens grooming</h4>
-            <h2>Services</h2>
-          </div>
-
-          <div class="column-section">
-            <div v-for="column in columnService" class="column">
-              <div class="content">
-                <img :src="'img/' + column.iconPath" :alt="column.alt">
-                <h3>{{ column.title }}</h3>
-                <p>{{ column.paragraph }}</p>
+            <!-- parte bassa sinistra del header con il titolo grande e il bottone -->
+            <div class="left">
+              <div class="text">
+                <h1>Barber Shop</h1>
+                <hr>
+                <p>The Pinnacle of Male Grooming</p>
+                <a class="btn" href="#">Learn more</a>
               </div>
             </div>
-          </div>
 
-          <div class="service-link">
-            <a class="btn" href="#">Read about our services</a>
+            <!-- parte bassa destra del header con la foto grande -->
+            <div class="right">
+              <img
+              :src="'img/' + mainHeaderImg.path" :alt="mainHeaderImg.name">
+            </div>
           </div>
 
         </div>
-      </section>
 
-      <section id="avada-grooming-products"></section>
+        <div class="aside">
+          <a v-for="item in asideItem" class="square" href="#">
+            <i :class="item.icon"></i>
+            <p>{{ item.text }}</p>
+          </a>
+        </div>
+      </header>
+      <!-- /header -->
 
-      <section id="reviews"></section>
+      <main>
+        <section id="pro-barbers">
+          <h4>award winning</h4>
+          <h2>Pro Barbers</h2>
+          <a class="btn" href="#">Meet your new barber</a>
+        </section>
 
-      <section id="blog-posts"></section>
-    </main>
+        <section id="services">
+          <div class="container">
 
-    <footer>
-      <div class="footer-top">
-        <div class="container">
-          <div class="column">
-            <div class="content"></div>
+            <div class="text">
+              <h4>Mens grooming</h4>
+              <h2>Services</h2>
+            </div>
+
+            <div class="column-section">
+              <div v-for="column in columnService" class="column">
+                <div class="content">
+                  <img :src="'img/' + column.iconPath" :alt="column.alt">
+                  <h3>{{ column.title }}</h3>
+                  <p>{{ column.paragraph }}</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="service-link">
+              <a class="btn" href="#">Read about our services</a>
+            </div>
+
           </div>
-          <div class="column">
-            <div class="content"></div>
-          </div>
-          <div class="column">
-            <div class="content"></div>
+        </section>
+
+        <section id="avada-grooming-products"></section>
+
+        <section id="reviews"></section>
+
+        <section id="blog-posts"></section>
+      </main>
+
+      <footer>
+        <div class="footer-top">
+          <div class="container">
+            <div class="column">
+              <div class="content"></div>
+            </div>
+            <div class="column">
+              <div class="content"></div>
+            </div>
+            <div class="column">
+              <div class="content"></div>
+            </div>
           </div>
         </div>
-      </div>
 
-      <div class="footer-bottom"></div>
-    </footer>
+        <div class="footer-bottom"></div>
+      </footer>
+
+    </div>
     <script src="js/script.js" charset="utf-8"></script>
   </body>
 </html>

@@ -1,6 +1,6 @@
-var header = new Vue(
+var app = new Vue(
   {
-    el: "header",
+    el: "#app",
     data: {
       logoImg: {
         name: "logo",
@@ -31,20 +31,7 @@ var header = new Vue(
           icon: "fas fa-shopping-cart",
           text: "Buy Now"
         }
-      ]
-    }, //fine data
-    methods: {
-      toogleActiveClass: function(index) {
-        this.navIcons[index].active = !this.navIcons[index].active;
-      }
-    }
-  }
-);
-
-var main = new Vue(
-  {
-    el: "main",
-    data: {
+      ],
       columnService: [
         {
           iconPath: "avadabarbers-trimcut-icon-before.png",
@@ -67,9 +54,11 @@ var main = new Vue(
 
         }
       ],
-    },
+    }, //fine data
     methods: {
-
+      toogleActiveClass: function(index) {
+        this.navIcons[index].active = !this.navIcons[index].active;
+      }
     }
   }
 );
