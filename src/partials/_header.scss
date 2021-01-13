@@ -1,5 +1,5 @@
 header {
-  @include setWH(inherit, 100vh);
+  @include setWH(none, 100vh);
   background-image: url("../img/avadabarbers-homepage-hero-bg.jpg");
   @include backgroundSize;
   background-position: top;
@@ -44,7 +44,7 @@ header {
   } // header top
 
   .header-bottom {
-    @include setWH(inherit, $headerBottomHeight);
+    @include setWH(none, $headerBottomHeight);
     padding-top: $headerTopHeight;
     .container {
       @include headerContainer($standardContainerWidth);
@@ -54,7 +54,7 @@ header {
         @include displaySet(row, flex-start, center);
         .text {
           hr {
-            @include setWH(250px, inherit);
+            @include setWH(250px, none);
             margin: 30px 0;
             border: 2px solid $brandColor;
           }
@@ -105,7 +105,7 @@ header {
     background-color: rgba(0, 0, 0, 0.7);
     z-index: 1;
     #nav-list {
-      @include setWH(inherit, 100%);
+      @include setWH(none, 100%);
       @include displaySet(column, center, center);
       li {
         a {
