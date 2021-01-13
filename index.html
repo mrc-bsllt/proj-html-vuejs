@@ -126,10 +126,19 @@
           <div id="months-product">
 
             <div class="left">
-              <img src="img/shaving_butter-400x400.png" alt="shaving butter">
+              <img
+              :src="'img/' + monthProduct.image"
+              :alt="monthProduct.name">
             </div>
 
-            <div class="right"></div>
+            <div class="right">
+              <div class="content">
+                <h4>This months featured product</h4>
+                <h2>{{ monthProduct.name }}</h2>
+                <p>{{ monthProduct.description }}</p>
+                <a class="btn" href="#">Buy now</a>
+              </div>
+            </div>
 
           </div>
         </section>

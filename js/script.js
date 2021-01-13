@@ -112,6 +112,11 @@ var app = new Vue(
           price: "30.00"
         },
       ],
+      monthProduct: {
+        name: "Shaving Butter",
+        image: "shaving_butter-400x400.png",
+        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque laoreet enim est, vel molestie dolor ultrices ut. Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+      }
     }, //fine data
     methods: {
       toogleActiveClass: function(index) {

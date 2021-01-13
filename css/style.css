@@ -392,7 +392,27 @@ header .hamburger-layover #nav-list li a:hover {
   background-position: center;
 }
 #avada-grooming-products #months-product .right {
+  position: relative;
   width: 60%;
+  text-align: left;
+}
+#avada-grooming-products #months-product .right .content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 72%;
+}
+#avada-grooming-products #months-product .right .content h2 {
+  margin: 5px 0 30px 0;
+}
+#avada-grooming-products #months-product .right .content p {
+  color: #505050;
+  font-weight: 300;
+  line-height: 32.4px;
+}
+#avada-grooming-products #months-product .right .content a {
+  margin: 20px 0;
 }
 
 #reviews {
