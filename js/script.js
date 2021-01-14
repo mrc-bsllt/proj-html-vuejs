@@ -36,7 +36,7 @@ var app = new Vue(
           }
         ],
         layoverMenu: {
-          background: "none",
+          background: "url('img/prova.png')",
           navLinks: [
             {
               text: "Home",
