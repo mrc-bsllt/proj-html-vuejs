@@ -22,6 +22,7 @@
         <div class="header-top">
           <div class="container">
 
+<!-- LOGO IN ALTO A SINISTRA -->
             <div class="left">
               <a href="#">
                 <img
@@ -29,6 +30,7 @@
               </a>
             </div>
 
+<!-- ICONA DEL CARRELLO + HAMBURGER MENU -->
             <div class="right">
               <ul id="icons-list">
                 <li v-for="(icon, index) in header.navIcons">
@@ -44,6 +46,7 @@
         <div class="header-bottom">
           <div class="container">
 
+<!-- SEZIONE DEL TITOLO PRINCIPALE -->
             <div class="left">
               <div class="text">
                 <h1>Barber Shop</h1>
@@ -53,6 +56,7 @@
               </div>
             </div>
 
+<!-- IMMAGINE GRANDE A SINISTRA DELL'HEADER -->
             <div class="right">
               <img
               :src="'img/' + header.mainHeaderImg.path" :alt="header.mainHeaderImg.name">
@@ -60,6 +64,7 @@
           </div>
         </div>
 
+<!-- BARRA LATERALE NEL'HEADER (A DESTRA) -->
         <div class="aside">
           <a v-for="item in header.asideItem" class="square" href="#">
             <i :class="item.icon"></i>
@@ -67,6 +72,7 @@
           </a>
         </div>
 
+<!-- LAYOVER CHE COMPARE DOPO IL CLICK NELL'HAMBURGER MENU -->
         <transition name="fade">
           <div v-if="header.navIcons[1].active" class="hamburger-layover">
             <ul id="nav-list">
@@ -79,14 +85,17 @@
       </header>
       <!-- /header -->
 
-
+      <!-- main -->
       <main>
+
+<!-- PICCOLA SEZIONE CHE PORTA ALLA PRESENTAZIONE DEI BARBIERI -->
         <section id="pro-barbers">
           <h4>award winning</h4>
           <h2>Pro Barbers</h2>
           <a class="btn" href="#">Meet your new barber</a>
         </section>
 
+<!-- SEZIONE A SFONDO BIANCO CON I SERVIZI PROPOSTI -->
         <section id="services" class="pos-rel">
           <div class="container">
 
@@ -108,6 +117,7 @@
           </div>
         </section>
 
+<!-- SEZIONE CON IMMAGINE SCURA IN BG CON ALCUNI PRODOTTI IN VENDITA -->
         <section id="avada-grooming-products" class="pos-rel">
           <h4>We have you covered</h4>
           <h2>Avada Grooming Products</h2>
@@ -128,6 +138,7 @@
 
           <a class="btn" href="#">Shop our product range</a>
 
+<!-- PICCOLO BANNER TRA DUE SEZIONI CON PRODOTTO DEL MESE IN EVIDENZA -->
           <div id="months-product">
 
             <div class="left">
@@ -148,6 +159,7 @@
           </div>
         </section>
 
+<!-- SEZIONE A SFONDO BIANCO CON ALCUNE RECENSIONI DEI CLIENTI -->
         <section id="reviews" class="pos-rel">
           <h4>What people say</h4>
           <h2>Reviews</h2>
@@ -162,6 +174,7 @@
           </div>
         </section>
 
+<!-- SEZIONE GRIGIO CHIARO CON I BLOG DA PUBBLICARE -->
         <section id="blog-posts">
           <h4>Tales from the barber shop</h4>
           <h2>Recent Blog Posts</h2>
@@ -182,8 +195,12 @@
           <a class="btn" href="#">Read more from our blog</a>
         </section>
       </main>
+      <!-- /main -->
 
+      <!-- footer -->
       <footer>
+
+<!-- PARTE ALTA DEL FOOTER  -->
         <div class="footer-top">
           <div class="container">
             <div class="column">
@@ -222,12 +239,14 @@
           </div>
         </div>
 
+<!-- PARTE BASSA DEL FOOTER -->
         <div class="footer-bottom">
           <p>
             © Copyright 2012 - 2021 | Avada Theme by <a href="#">ThemeFusion</a> | All Rights Reserved | Powered by <a href="#">WordPress</a>
           </p>
         </div>
       </footer>
+      <!-- /footer -->
 
     </div>
     <script src="js/script.js" charset="utf-8"></script>
