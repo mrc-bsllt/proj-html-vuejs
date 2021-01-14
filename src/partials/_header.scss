@@ -104,9 +104,8 @@ header {
   .hamburger-layover {
     @include position(fixed, top, 0, right, 0);
     @include setWH(100%, 100vh);
-    background-color: rgba(0, 0, 0, 0.7);
-    //background-image: url("../img/prova.jpg");
     @include backgroundSize;
+    background-color: rgba(0, 0, 0, 0.7);
     background-position: center;
     z-index: 1;
     #nav-list {
