@@ -77,3 +77,12 @@ main {
  .fade-leave-to {
   opacity: 0;
 }
+
+.fade-bg-enter-active,
+ .fade-bg-leave-active {
+  transition: opacity 1.5s;
+}
+.fade-bg-enter,
+ .fade-bg-leave-to {
+  opacity: 0;
+}

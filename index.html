@@ -76,19 +76,25 @@
         <transition name="fade">
           <div
           v-if="header.navIcons[1].active"
-          class="hamburger-layover"
-          style="transition: all 0.5s ease-in"
-          :style="{backgroundImage:header.layoverMenu.background}">
+          class="hamburger-layover">
             <ul id="nav-list">
-              <li
-              v-for="(link, index) in header.layoverMenu.navLinks">
+              <li v-for="(link, index) in header.layoverMenu.navLinks">
                 <a
+                href="#"
                 @mouseenter="changeBgLayover(index)"
-                @mouseleave="header.layoverMenu.background = 'none'"
-                href="#">{{ link.text }}
+                @mouseleave="header.layoverMenu.activeBgIndex = -1">
+                  {{ link.text }}
                 </a>
+                <transition name="fade-bg">
+                  <div
+                  v-if="index == header.layoverMenu.activeBgIndex"
+                  class="dinamic-bg"
+                  :style="{backgroundImage:header.layoverMenu.navLinks[index].bg}">
+                  </div>
+                </transition>
               </li>
             </ul>
+
           </div>
         </transition>
       </header>

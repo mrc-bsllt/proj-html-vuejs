@@ -36,7 +36,8 @@ var app = new Vue(
           }
         ],
         layoverMenu: {
-          background: "none",
+          // background: "none",
+          activeBgIndex: -1,
           navLinks: [
             {
               text: "Home",
@@ -194,8 +195,7 @@ var app = new Vue(
         this.header.navIcons[index].active = !this.header.navIcons[index].active;
       }, //fine funzione
       changeBgLayover: function(index) {
-        let targetBg = this.header.layoverMenu.navLinks[index].bg;
-        this.header.layoverMenu.background = targetBg;
+        this.header.layoverMenu.activeBgIndex = index;
       } //fine funzione
     } //methods
   }
