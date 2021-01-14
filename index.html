@@ -84,7 +84,7 @@
           <a class="btn" href="#">Meet your new barber</a>
         </section>
 
-        <section id="services">
+        <section id="services" class="pos-rel">
           <div class="container">
 
             <h4>Mens grooming</h4>
@@ -105,7 +105,7 @@
           </div>
         </section>
 
-        <section id="avada-grooming-products">
+        <section id="avada-grooming-products" class="pos-rel">
           <h4>We have you covered</h4>
           <h2>Avada Grooming Products</h2>
 
@@ -131,7 +131,7 @@
               :alt="monthProduct.name">
             </div>
 
-            <div class="right">
+            <div class="right pos-rel">
               <div class="content">
                 <h4>This months featured product</h4>
                 <h2>{{ monthProduct.name }}</h2>
@@ -143,23 +143,39 @@
           </div>
         </section>
 
-        <section id="reviews">
+        <section id="reviews" class="pos-rel">
           <h4>What people say</h4>
           <h2>Reviews</h2>
-          <div class="column-section">
-            <div class="container">
-              <div class="column" v-for="user in usersReviews">
-                <div class="content">
-                  <p>{{ user.rev }}</p>
-                  <img :src="'img/' + user.avatar" :alt="user.name">
-                  <h5>{{ user.name }}</h5>
-                </div>
+          <div class="container">
+            <div class="column" v-for="user in usersReviews">
+              <div class="content">
+                <p>{{ user.rev }}</p>
+                <img :src="'img/' + user.avatar" :alt="user.name">
+                <h5>{{ user.name }}</h5>
               </div>
             </div>
           </div>
         </section>
 
-        <section id="blog-posts"></section>
+        <section id="blog-posts">
+          <h4>Tales from the barber shop</h4>
+          <h2>Recent Blog Posts</h2>
+          <div class="container">
+            <div v-for="blog in main.blogs" class="column">
+              <div class="content">
+                <a href="#">
+                  <div class="image">
+                    <img :src="'img/' + blog.cover" :alt="blog.title">
+                  </div>
+                  <h3>{{ blog.title }}</h3>
+                  <p>{{ blog.content }}</p>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <a class="btn" href="#">Read more from our blog</a>
+        </section>
       </main>
 
       <footer>

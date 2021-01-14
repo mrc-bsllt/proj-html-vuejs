@@ -75,6 +75,10 @@ a {
   border-radius: 5px;
 }
 
+.pos-rel {
+  position: relative;
+}
+
 main {
   margin-bottom: 600px;
   overflow-x: hidden;
@@ -111,6 +115,7 @@ header .header-top {
   left: 0;
   width: 100%;
   height: 95px;
+  padding: 0 15px;
   z-index: 2;
 }
 header .header-top .container {
@@ -158,7 +163,7 @@ header .header-top .container .right #icons-list li a i.fa-bars {
 header .header-bottom {
   width: none;
   height: calc(100% - 95px);
-  padding-top: 95px;
+  padding: 95px 15px 0;
 }
 header .header-bottom .container {
   width: 60%;
@@ -278,7 +283,6 @@ header .hamburger-layover #nav-list li a:hover {
 }
 
 #services {
-  position: relative;
   width: 100%;
   height: 100vh;
   background-color: #ffffff;
@@ -332,7 +336,6 @@ header .hamburger-layover #nav-list li a:hover {
 }
 
 #avada-grooming-products {
-  position: relative;
   width: 100%;
   height: 1070px;
   background-image: url("../img/avadabarbers-reviewsbackground.jpg");
@@ -392,7 +395,7 @@ header .hamburger-layover #nav-list li a:hover {
   flex-direction: row;
   justify-content: flex-start;
   align-items: stretch;
-  width: 60%;
+  width: calc(60% - 30px);
   height: 460px;
   background-color: #111110;
   border-top: 3px solid #ae8652;
@@ -413,7 +416,6 @@ header .hamburger-layover #nav-list li a:hover {
   background-position: center;
 }
 #avada-grooming-products #months-product .right {
-  position: relative;
   width: 60%;
   height: none;
   text-align: left;
@@ -439,7 +441,6 @@ header .hamburger-layover #nav-list li a:hover {
 }
 
 #reviews {
-  position: relative;
   background-color: #ffffff;
   text-align: center;
   padding-top: calc(460px + 100px);
@@ -483,9 +484,50 @@ header .hamburger-layover #nav-list li a:hover {
 }
 
 #blog-posts {
-  width: inherit;
-  height: 1100px;
+  padding: 220px 0 100px;
   background-color: #eae8e6;
+  text-align: center;
+}
+#blog-posts .container {
+  width: 60%;
+  height: 100%;
+  margin: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: stretch;
+  flex-wrap: wrap;
+}
+#blog-posts .container .column {
+  width: calc(100% / 3);
+  padding: 50px 15px;
+}
+#blog-posts .container .column .content {
+  width: 100%;
+  height: 100%;
+}
+#blog-posts .container .column .content .image {
+  width: 100%;
+  height: 230px;
+  overflow: hidden;
+}
+#blog-posts .container .column .content .image img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+  -o-object-position: center;
+     object-position: center;
+}
+#blog-posts .container .column .content .image img:hover {
+  transform: scale(1.1);
+  filter: blur(1px);
+  transition: 1s ease-in-out;
+}
+#blog-posts .container .column .content p {
+  color: #505050;
+  line-height: 32.4px;
+  font-weight: 300;
 }
 
 footer {

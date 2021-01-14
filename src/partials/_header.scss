@@ -7,6 +7,7 @@ header {
   .header-top {
     @include position(fixed, top, 0, left, 0);
     @include setWH(100%, $headerTopHeight);
+    padding: 0 15px;
     z-index: 2;
     .container {
       @include headerContainer($standardContainerWidth);
@@ -45,7 +46,7 @@ header {
 
   .header-bottom {
     @include setWH(none, $headerBottomHeight);
-    padding-top: $headerTopHeight;
+    padding: $headerTopHeight 15px 0;
     .container {
       @include headerContainer($standardContainerWidth);
       @include displaySet(row, flex-start, stretch);

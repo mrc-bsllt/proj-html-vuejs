@@ -1,5 +1,4 @@
 #avada-grooming-products {
-  position: relative;
   @include setWH(100%, 1070px);
   background-image: url("../img/avadabarbers-reviewsbackground.jpg");
   @include backgroundSize;
@@ -33,7 +32,7 @@
     @include position(absolute, bottom, -410px, left, 50%);
     transform: translateX(-50%);
     @include displaySet(row, flex-start, stretch);
-    @include setWH(60%, $monthsProductHeight);
+    @include setWH(calc(60% - 30px), $monthsProductHeight);
     background-color: $footerTopBgColor;
     border-top: 3px solid $brandColor;
     z-index: 2;
@@ -45,7 +44,6 @@
       background-position: center;
     }
     .right {
-      position: relative;
       @include setWH(60%, none);
       text-align: left;
       .content {

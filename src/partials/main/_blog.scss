@@ -1,4 +1,36 @@
 #blog-posts {
-  @include setWH(inherit, 1100px);
+  padding: 220px 0 100px;
   background-color: $blogSectionColor;
-}
+  text-align: center;
+  .container {
+    @include headerContainer($standardContainerWidth);
+    @include displaySet(row, center, stretch);
+    flex-wrap: wrap;
+    .column {
+      width: calc(100% / 3);
+      padding: 50px 15px;
+      .content {
+        @include setWH(100%, 100%);
+        .image {
+          @include setWH(100%, 230px);
+          overflow: hidden;
+          img {
+            @include setWH(100%, 100%);
+            object-fit: contain;
+            object-position: center;
+            &:hover {
+              transform: scale(1.1);
+              filter: blur(1px);
+              transition: 1s ease-in-out;
+            }
+          }
+        } //.image
+        p {
+          color: $mainParagrapghColor;
+          line-height: 32.4px;
+          font-weight: 300;
+        }
+      } //.content
+    } //.column
+  } //.container
+} //#blog-posts
