@@ -36,7 +36,6 @@ var app = new Vue(
           }
         ],
         layoverMenu: {
-          // background: "none",
           activeBgIndex: -1,
           navLinks: [
             {
