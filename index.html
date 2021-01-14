@@ -74,10 +74,18 @@
 
 <!-- LAYOVER CHE COMPARE DOPO IL CLICK NELL'HAMBURGER MENU -->
         <transition name="fade">
-          <div v-if="header.navIcons[1].active" class="hamburger-layover">
+          <div
+          v-if="header.navIcons[1].active"
+          class="hamburger-layover"
+          :style="{backgroundImage:header.layoverMenu.background}">
             <ul id="nav-list">
-              <li v-for="link in header.navLinks">
-                <a href="#">{{ link }}</a>
+              <li
+              v-for="(link, index) in header.layoverMenu.navLinks">
+                <a
+                @mouseenter="changeBgLayover(index)"
+                @mouseleave="header.layoverMenu.background='none'"
+                href="#">{{ link.text }}
+                </a>
               </li>
             </ul>
           </div>

@@ -87,6 +87,7 @@ header {
     padding: 150px 0;
     a {
       @include displaySet(column, center, center);
+      flex-wrap: wrap;
       i {
         margin-bottom: 8px;
         color: $asideColor;
@@ -104,6 +105,9 @@ header {
     @include position(fixed, top, 0, right, 0);
     @include setWH(100%, 100vh);
     background-color: rgba(0, 0, 0, 0.7);
+    //background-image: url("../img/prova.jpg");
+    @include backgroundSize;
+    background-position: center;
     z-index: 1;
     #nav-list {
       @include setWH(none, 100%);

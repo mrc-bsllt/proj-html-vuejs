@@ -35,15 +35,39 @@ var app = new Vue(
             text: "Buy Now"
           }
         ],
-        navLinks: [
-          "Home",
-          "About Us",
-          "Services",
-          "Shop",
-          "Our Team",
-          "Blog",
-          "Contact Us"
-        ]
+        layoverMenu: {
+          background: "none",
+          navLinks: [
+            {
+              text: "Home",
+              bg: "url('img/avadabarbers-homepage-hero-bg.jpg')"
+            },
+            {
+              text: "About Us",
+              bg: "url('img/about_bg.jpg')"
+            },
+            {
+              text: "Services",
+              bg: "url('img/services_bg.jpg')"
+            },
+            {
+              text: "Shop",
+              bg: "url('img/shop_bg.jpg')"
+            },
+            {
+              text: "Our Team",
+              bg: "url('img/team_bg.jpg')"
+            },
+            {
+              text: "Blog",
+              bg: "url('img/blog_bg.jpg')"
+            },
+            {
+              text: "Contact Us",
+              bg: "url('img/contact_bg.jpg')"
+            }
+          ]
+        },
       },
       main: {
         services: {
@@ -168,6 +192,10 @@ var app = new Vue(
     methods: {
       toogleActiveClass: function(index) {
         this.header.navIcons[index].active = !this.header.navIcons[index].active;
+      }, //fine funzione
+      changeBgLayover: function(index) {
+        let targetBg = this.header.layoverMenu.navLinks[index].bg;
+        this.header.layoverMenu.background = targetBg;
       } //fine funzione
     } //methods
   }
