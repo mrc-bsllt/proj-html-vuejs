@@ -23,12 +23,15 @@
           <div class="container">
 
             <div class="left">
-              <a href="#"><img :src="'img/' + logoImg.path" :alt="logoImg.name"></a>
+              <a href="#">
+                <img
+                :src="'img/' + header.logoImg.path" :alt="header.logoImg.name">
+              </a>
             </div>
 
             <div class="right">
               <ul id="icons-list">
-                <li v-for="(icon, index) in navIcons">
+                <li v-for="(icon, index) in header.navIcons">
                   <a href="#">
                     <i :class="icon.prefix + icon.type" @click="toogleActiveClass(index)"></i>
                   </a>
@@ -52,22 +55,22 @@
 
             <div class="right">
               <img
-              :src="'img/' + mainHeaderImg.path" :alt="mainHeaderImg.name">
+              :src="'img/' + header.mainHeaderImg.path" :alt="header.mainHeaderImg.name">
             </div>
           </div>
         </div>
 
         <div class="aside">
-          <a v-for="item in asideItem" class="square" href="#">
+          <a v-for="item in header.asideItem" class="square" href="#">
             <i :class="item.icon"></i>
             <p>{{ item.text }}</p>
           </a>
         </div>
 
         <transition name="fade">
-          <div v-if="navIcons[1].active" class="hamburger-layover">
+          <div v-if="header.navIcons[1].active" class="hamburger-layover">
             <ul id="nav-list">
-              <li v-for="link in navLinks">
+              <li v-for="link in header.navLinks">
                 <a href="#">{{ link }}</a>
               </li>
             </ul>
@@ -91,7 +94,7 @@
             <h2>Services</h2>
 
             <div class="column-section">
-              <div v-for="column in columnService" class="column">
+              <div v-for="column in main.services.columnService" class="column">
                 <div class="content">
                   <img :src="'img/' + column.iconPath" :alt="column.alt">
                   <h3>{{ column.title }}</h3>
@@ -110,7 +113,9 @@
           <h2>Avada Grooming Products</h2>
 
           <div class="column-section">
-            <div class="column" v-for="product in productsList">
+            <div
+            class="column"
+            v-for="product in main.groomingProducts.productsList">
               <div class="content">
                 <a href="#">
                   <img :src="'img/' + product.image" :alt="product.name">
@@ -127,15 +132,15 @@
 
             <div class="left">
               <img
-              :src="'img/' + monthProduct.image"
-              :alt="monthProduct.name">
+              :src="'img/' + main.groomingProducts.monthProduct.image"
+              :alt="main.groomingProducts.monthProduct.name">
             </div>
 
             <div class="right pos-rel">
               <div class="content">
                 <h4>This months featured product</h4>
-                <h2>{{ monthProduct.name }}</h2>
-                <p>{{ monthProduct.description }}</p>
+                <h2>{{ main.groomingProducts.monthProduct.name }}</h2>
+                <p>{{ main.groomingProducts.monthProduct.description }}</p>
                 <a class="btn" href="#">Buy now</a>
               </div>
             </div>
@@ -147,7 +152,7 @@
           <h4>What people say</h4>
           <h2>Reviews</h2>
           <div class="container">
-            <div class="column" v-for="user in usersReviews">
+            <div class="column" v-for="user in main.reviews.usersReviews">
               <div class="content">
                 <p>{{ user.rev }}</p>
                 <img :src="'img/' + user.avatar" :alt="user.name">
@@ -191,14 +196,15 @@
             <div class="column">
               <div class="content">
                 <a id="logo" href="#">
-                  <img :src="'img/' + logoImg.path" :alt="logoImg.name">
+                  <img
+                  :src="'img/' + header.logoImg.path" :alt="header.logoImg.name">
                 </a>
                 <div class="corporate-data">
-                  <p v-for="data in corporateData">{{ data }}</p>
+                  <p v-for="data in footer.corporateData">{{ data }}</p>
                 </div>
                 <h4>Follow us</h4>
                 <ul id="social">
-                  <li v-for="page in socialPages">
+                  <li v-for="page in footer.socialPages">
                     <a href="#">
                       <i :class="page.prefix + page.social"></i>
                     </a>
