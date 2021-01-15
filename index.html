@@ -194,11 +194,16 @@
           <h4>Tales from the barber shop</h4>
           <h2>Recent Blog Posts</h2>
           <div class="container">
-            <div v-for="blog in main.blogs" class="column">
+            <div v-for="(blog, index) in main.blogs" class="column">
               <div class="content">
                 <a href="#">
                   <div class="image">
-                    <img :src="'img/' + blog.cover" :alt="blog.title">
+                    <img
+                    :src="'img/' + blog.cover"
+                    :alt="blog.title"
+                    @mouseenter="toggleHoverEffect(index)"
+                    @mouseleave="toggleHoverEffect(index)"
+                    :class="main.blogs[index].hoverEffect ? 'zoom-up-effect' : 'zoom-down-effect'">
                   </div>
                   <h3>{{ blog.title }}</h3>
                   <p>{{ blog.content }}</p>

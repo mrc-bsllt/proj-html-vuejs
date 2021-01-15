@@ -147,17 +147,20 @@ var app = new Vue(
           {
             title: "Avada Barbers Now Open",
             cover: "avadabarbers-second-blog-700x441.jpg",
-            content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ut dapibus magna. Praesent semper,Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ut dapibus magna. Praesent semper."
+            content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ut dapibus magna. Praesent semper,Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ut dapibus magna. Praesent semper.",
+            hoverEffect: false
           },
           {
             title: "Choosing The Right Barber",
             cover: "avadabarbers-choosing-blog-700x441.jpg",
-            content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ut dapibus magna. Praesent semper,Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ut dapibus magna. Praesent semper."
+            content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ut dapibus magna. Praesent semper,Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ut dapibus magna. Praesent semper.",
+            hoverEffect: false
           },
           {
             title: "Quick Service Guide",
             cover: "avadabarbers-ourservice-blog-700x441.jpg",
-            content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ut dapibus magna. Praesent semper,Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ut dapibus magna. Praesent semper."
+            content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ut dapibus magna. Praesent semper,Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ut dapibus magna. Praesent semper.",
+            hoverEffect: false
           }
         ]
       },
@@ -195,7 +198,10 @@ var app = new Vue(
       }, //fine funzione
       changeBgLayover: function(index) {
         this.header.layoverMenu.activeBgIndex = index;
-      } //fine funzione
+      }, //fine funzione
+      toggleHoverEffect: function (index) {
+        this.main.blogs[index].hoverEffect = !this.main.blogs[index].hoverEffect;
+      }, //fine funzione
     } //methods
   }
 );

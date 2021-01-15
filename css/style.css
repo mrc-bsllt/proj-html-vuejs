@@ -109,6 +109,69 @@ main {
   opacity: 0;
 }
 
+.zoom-up-effect {
+  -webkit-animation-name: zoomUp;
+          animation-name: zoomUp;
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+.zoom-down-effect {
+  -webkit-animation-name: zoomDown;
+          animation-name: zoomDown;
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes zoomUp {
+  0% {
+    transform: scale(1);
+    filter: blur(0);
+  }
+  100% {
+    transform: scale(1.1);
+    filter: blur(1px);
+  }
+}
+
+@keyframes zoomUp {
+  0% {
+    transform: scale(1);
+    filter: blur(0);
+  }
+  100% {
+    transform: scale(1.1);
+    filter: blur(1px);
+  }
+}
+@-webkit-keyframes zoomDown {
+  0% {
+    transform: scale(1.1);
+    filter: blur(1px);
+  }
+  100% {
+    transform: scale(1);
+    filter: blur(0);
+  }
+}
+@keyframes zoomDown {
+  0% {
+    transform: scale(1.1);
+    filter: blur(1px);
+  }
+  100% {
+    transform: scale(1);
+    filter: blur(0);
+  }
+}
 header {
   width: none;
   height: 100vh;
@@ -542,11 +605,6 @@ header .hamburger-layover .dinamic-bg {
      object-fit: contain;
   -o-object-position: center;
      object-position: center;
-}
-#blog-posts .container .column .content .image img:hover {
-  transform: scale(1.1);
-  filter: blur(1px);
-  transition: 1s ease-in-out;
 }
 #blog-posts .container .column .content p {
   color: #505050;
