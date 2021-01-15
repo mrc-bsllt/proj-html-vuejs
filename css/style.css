@@ -68,8 +68,8 @@ a {
 }
 
 .square {
-  width: 65px;
-  height: 65px;
+  width: 60px;
+  height: 60px;
   margin: 5px 0;
   background-color: #ffffff;
   border-radius: 5px;
@@ -283,23 +283,38 @@ header .aside {
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  width: 100px;
+  width: 500px;
   height: 100%;
   padding: 150px 0;
 }
-header .aside a {
+header .aside .square .icons {
+  position: absolute;
+  top: 0;
+  left: 0;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  width: calc(60px * 2);
+  height: 60%;
+}
+header .aside .square .icons i {
+  display: inline-block;
+  color: #4f659a;
+  font-size: 22px;
+}
+header .aside .square .text {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
-  flex-wrap: wrap;
+  width: 60px;
+  height: 40%;
 }
-header .aside a i {
-  margin-bottom: 8px;
-  color: #4f659a;
-  font-size: 28px;
-}
-header .aside a p {
+header .aside .square .text p {
   font-size: 12px;
   font-weight: 700;
   color: #4f659a;

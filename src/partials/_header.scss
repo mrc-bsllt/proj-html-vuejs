@@ -78,22 +78,31 @@ header {
   .aside {
     @include position(absolute, top, 0, right, 0);
     @include displaySet(column, flex-start, center);
-    @include setWH(100px, 100%);
+    @include setWH(500px, 100%);
     padding: 150px 0;
-    a {
-      @include displaySet(column, center, center);
-      flex-wrap: wrap;
-      i {
-        margin-bottom: 8px;
-        color: $asideColor;
-        font-size: 28px;
-      }
-      p {
-        font-size: 12px;
-        font-weight: 700;
-        color: $asideColor;
-      }
-    } // a
+    .square {
+      //overflow: hidden;
+      .icons {
+        @include position(absolute, top, 0, left, 0);
+        @include displaySet(row, space-around, center);
+        @include setWH(calc(#{$squareAsideHeight} * 2), 60%);
+        i {
+          display: inline-block;
+          color: $asideColor;
+          font-size: 22px;
+        }
+      } //.icons
+      .text {
+        @include position(absolute, bottom, 0, left, 0);
+        @include displaySet(row, center, center);
+        @include setWH($squareAsideHeight, 40%);
+        p {
+          font-size: 12px;
+          font-weight: 700;
+          color: $asideColor;
+        }
+      } // .text
+    } // square
   } // aside
 
   .hamburger-layover {

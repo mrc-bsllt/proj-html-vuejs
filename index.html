@@ -70,9 +70,14 @@
 
 <!-- BARRA LATERALE NEL'HEADER (A DESTRA) -->
         <div class="aside">
-          <a v-for="item in header.asideItem" class="square" href="#">
-            <i :class="item.icon"></i>
-            <p>{{ item.text }}</p>
+          <a v-for="item in header.asideItem" class="square pos-rel" href="#">
+            <div class="icons">
+              <i :class="item.icon"></i>
+              <i :class="item.icon"></i>
+            </div>
+            <div class="text">
+              <p>{{ item.text }}</p>
+            </div>
           </a>
         </div>
 
