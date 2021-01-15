@@ -37,7 +37,9 @@
               <ul id="icons-list">
                 <li v-for="(icon, index) in header.navIcons">
                   <a href="#">
-                    <i :class="icon.prefix + icon.type" @click="toogleActiveClass('header', 'navIcons', index)"></i>
+                    <i
+                    :class="icon.active ? icon.deleteClass:icon.class" @click="toogleActiveClass('header', 'navIcons', index)">
+                  </i>
                   </a>
                 </li>
               </ul>
@@ -177,7 +179,7 @@
         </section>
 
 <!-- SEZIONE A SFONDO BIANCO CON ALCUNE RECENSIONI DEI CLIENTI -->
-        <section id="reviews" class="pos-rel">
+        <section id="reviews" class="pos-rel" v-on:scroll="prova">
           <h4>What people say</h4>
           <h2>Reviews</h2>
           <div class="container">

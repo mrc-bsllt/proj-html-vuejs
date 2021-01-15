@@ -222,16 +222,11 @@ header .header-top .container .right #icons-list li {
 header .header-top .container .right #icons-list li a i {
   margin: 15px;
   vertical-align: middle;
+  font-size: 20px;
 }
 header .header-top .container .right #icons-list li a i:hover {
   color: #ae8652;
   transition: 0.3s linear;
-}
-header .header-top .container .right #icons-list li a i.fa-shopping-cart {
-  font-size: 17px;
-}
-header .header-top .container .right #icons-list li a i.fa-bars {
-  font-size: 27px;
 }
 header .header-bottom {
   width: none;

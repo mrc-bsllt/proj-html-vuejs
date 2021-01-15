@@ -26,16 +26,11 @@ header {
               i {
                 margin: $iconsMargin;
                 vertical-align: middle;
+                font-size: 20px;
                 &:hover {
                   color: $brandColor;
                   transition: $standardTransition;
                 }
-              }
-              i.fa-shopping-cart {
-                font-size: 17px;
-              }
-              i.fa-bars {
-                font-size: 27px;
               }
             } //a
           } //li

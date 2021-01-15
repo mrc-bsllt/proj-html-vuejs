@@ -9,12 +9,16 @@ var app = new Vue(
         },
         navIcons: [
           {
+            class: "fas fa-shopping-cart",
+            deleteClass: "fas fa-times",
             prefix: "fas ",
             type: "fa-shopping-cart",
             close: "fa-times",
             active: false
           },
           {
+            class: "fas fa-bars",
+            deleteClass: "fas fa-times",
             prefix: "fas ",
             type: "fa-bars",
             close: "fa-times",
@@ -202,6 +206,9 @@ var app = new Vue(
       toggleHoverEffect: function (ref, ref2, index) {
         this[ref][ref2][index].hoverEffect = !this[ref][ref2][index].hoverEffect;
       }, //fine funzione
+      prova: function() {
+        console.log("ciao")
+      }
     } //methods
   }
 );
