@@ -7,6 +7,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet">
     <!-- font awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+    <!-- animate -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     <!-- vueJs -->
     <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
     <!-- foglio di stile personale -->
@@ -35,7 +37,7 @@
               <ul id="icons-list">
                 <li v-for="(icon, index) in header.navIcons">
                   <a href="#">
-                    <i :class="icon.prefix + icon.type" @click="toogleActiveClass(index)"></i>
+                    <i :class="icon.prefix + icon.type" @click="toogleActiveClass('header', 'navIcons', index)"></i>
                   </a>
                 </li>
               </ul>
@@ -47,7 +49,7 @@
           <div class="container">
 
 <!-- SEZIONE DEL TITOLO PRINCIPALE -->
-            <div class="left">
+            <div class="left animate__animated animate__fadeInLeft">
               <div class="text">
                 <h1>Barber Shop</h1>
                 <hr>
@@ -57,7 +59,7 @@
             </div>
 
 <!-- IMMAGINE GRANDE A SINISTRA DELL'HEADER -->
-            <div class="right">
+            <div class="right animate__animated animate__fadeInRight">
               <img
               :src="'img/' + header.mainHeaderImg.path" :alt="header.mainHeaderImg.name">
             </div>
@@ -201,8 +203,8 @@
                     <img
                     :src="'img/' + blog.cover"
                     :alt="blog.title"
-                    @mouseenter="toggleHoverEffect(index)"
-                    @mouseleave="toggleHoverEffect(index)"
+                    @mouseenter="toggleHoverEffect('main', 'blogs', index)"
+                    @mouseleave="toggleHoverEffect('main', 'blogs', index)"
                     :class="main.blogs[index].hoverEffect ? 'zoom-up-effect' : 'zoom-down-effect'">
                   </div>
                   <h3>{{ blog.title }}</h3>
@@ -267,8 +269,8 @@
         </div>
       </footer>
       <!-- /footer -->
-
     </div>
+
     <script src="js/script.js" charset="utf-8"></script>
   </body>
 </html>

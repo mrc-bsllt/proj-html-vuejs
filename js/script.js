@@ -193,14 +193,14 @@ var app = new Vue(
       }
     }, //fine data
     methods: {
-      toogleActiveClass: function(index) {
-        this.header.navIcons[index].active = !this.header.navIcons[index].active;
+      toogleActiveClass: function(ref, ref2, index) {
+        this[ref][ref2][index].active = !this[ref][ref2][index].active;
       }, //fine funzione
       changeBgLayover: function(index) {
         this.header.layoverMenu.activeBgIndex = index;
       }, //fine funzione
-      toggleHoverEffect: function (index) {
-        this.main.blogs[index].hoverEffect = !this.main.blogs[index].hoverEffect;
+      toggleHoverEffect: function (ref, ref2, index) {
+        this[ref][ref2][index].hoverEffect = !this[ref][ref2][index].hoverEffect;
       }, //fine funzione
     } //methods
   }
