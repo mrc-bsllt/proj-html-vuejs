@@ -98,6 +98,18 @@ main {
   animation-timing-function: linear;
   animation-fill-mode: forwards;
 }
+.right-to-left {
+  animation-name: rightToLeft;
+  animation-duration: 0.2s;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+}
+.left-to-right {
+  animation-name: leftToRight;
+  animation-duration: 0.2s;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+}
 // animazioni
 @keyframes zoomUp {
   0% {
@@ -117,5 +129,21 @@ main {
   100% {
     transform: scale(1);
     filter: blur(0);
+  }
+}
+@keyframes rightToLeft {
+  0% {
+    @include position(absolute, top, 0, left, 0);
+  }
+  100% {
+    @include position(absolute, top, 0, left, -100%);
+  }
+}
+@keyframes leftToRight {
+  0% {
+    @include position(absolute, top, 0, left, -100%);
+  }
+  100% {
+    @include position(absolute, top, 0, left, 0);
   }
 }

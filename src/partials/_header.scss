@@ -78,10 +78,10 @@ header {
   .aside {
     @include position(absolute, top, 0, right, 0);
     @include displaySet(column, flex-start, center);
-    @include setWH(500px, 100%);
+    @include setWH(100px, 100%);
     padding: 150px 0;
     .square {
-      //overflow: hidden;
+      overflow: hidden;
       .icons {
         @include position(absolute, top, 0, left, 0);
         @include displaySet(row, space-around, center);

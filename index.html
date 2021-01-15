@@ -70,8 +70,12 @@
 
 <!-- BARRA LATERALE NEL'HEADER (A DESTRA) -->
         <div class="aside">
-          <a v-for="item in header.asideItem" class="square pos-rel" href="#">
-            <div class="icons">
+          <a v-for="(item,index) in header.asideItem" class="square pos-rel" href="#">
+            <div
+            class="icons"
+            @mouseenter="toggleHoverEffect('header', 'asideItem', index)"
+            @mouseleave="toggleHoverEffect('header', 'asideItem', index)"
+            :class="item.hoverEffect ? 'right-to-left':'left-to-right'">
               <i :class="item.icon"></i>
               <i :class="item.icon"></i>
             </div>

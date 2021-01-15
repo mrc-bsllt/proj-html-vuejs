@@ -131,6 +131,28 @@ main {
           animation-fill-mode: forwards;
 }
 
+.right-to-left {
+  -webkit-animation-name: rightToLeft;
+          animation-name: rightToLeft;
+  -webkit-animation-duration: 0.2s;
+          animation-duration: 0.2s;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+.left-to-right {
+  -webkit-animation-name: leftToRight;
+          animation-name: leftToRight;
+  -webkit-animation-duration: 0.2s;
+          animation-duration: 0.2s;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
 @-webkit-keyframes zoomUp {
   0% {
     transform: scale(1);
@@ -170,6 +192,54 @@ main {
   100% {
     transform: scale(1);
     filter: blur(0);
+  }
+}
+@-webkit-keyframes rightToLeft {
+  0% {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  100% {
+    position: absolute;
+    top: 0;
+    left: -100%;
+  }
+}
+@keyframes rightToLeft {
+  0% {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  100% {
+    position: absolute;
+    top: 0;
+    left: -100%;
+  }
+}
+@-webkit-keyframes leftToRight {
+  0% {
+    position: absolute;
+    top: 0;
+    left: -100%;
+  }
+  100% {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+}
+@keyframes leftToRight {
+  0% {
+    position: absolute;
+    top: 0;
+    left: -100%;
+  }
+  100% {
+    position: absolute;
+    top: 0;
+    left: 0;
   }
 }
 header {
@@ -283,9 +353,12 @@ header .aside {
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  width: 500px;
+  width: 100px;
   height: 100%;
   padding: 150px 0;
+}
+header .aside .square {
+  overflow: hidden;
 }
 header .aside .square .icons {
   position: absolute;

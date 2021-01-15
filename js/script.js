@@ -32,11 +32,13 @@ var app = new Vue(
         asideItem: [
           {
             icon: "fas fa-desktop",
-            text: "Demos"
+            text: "Demos",
+            hoverEffect: false
           },
           {
             icon: "fas fa-shopping-cart",
-            text: "Buy Now"
+            text: "Buy Now",
+            hoverEffect: false
           }
         ],
         layoverMenu: {
