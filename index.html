@@ -90,19 +90,22 @@
           <div
           v-if="header.navIcons[1].active"
           class="hamburger-layover">
+
             <ul id="nav-list">
-              <li v-for="(link, index) in header.layoverMenu.navLinks">
+              <li
+              v-for="(link, index) in header.layoverMenu.navLinks">
                 <a
                 href="#"
                 @mouseenter="changeBgLayover(index)"
                 @mouseleave="header.layoverMenu.activeBgIndex = -1">
                   {{ link.text }}
                 </a>
+
                 <transition name="fade-bg">
                   <div
                   v-if="index == header.layoverMenu.activeBgIndex"
                   class="dinamic-bg"
-                  :style="{backgroundImage:header.layoverMenu.navLinks[index].bg}">
+                  :style="{backgroundImage:link.bg}">
                   </div>
                 </transition>
               </li>
@@ -188,7 +191,7 @@
         </section>
 
 <!-- SEZIONE A SFONDO BIANCO CON ALCUNE RECENSIONI DEI CLIENTI -->
-        <section id="reviews" class="pos-rel" v-on:scroll="prova">
+        <section id="reviews" class="pos-rel">
           <h4>What people say</h4>
           <h2>Reviews</h2>
           <div class="container">

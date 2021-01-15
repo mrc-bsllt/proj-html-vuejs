@@ -208,9 +208,6 @@ var app = new Vue(
       toggleHoverEffect: function (ref, ref2, index) {
         this[ref][ref2][index].hoverEffect = !this[ref][ref2][index].hoverEffect;
       }, //fine funzione
-      prova: function() {
-        console.log("ciao")
-      }
     } //methods
   }
 );

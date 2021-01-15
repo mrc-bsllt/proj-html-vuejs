@@ -24,9 +24,9 @@
           font-weight: 300;
           font-size: 18px;
         }
-      }
-    }
-  }
+      } //.content
+    } //.column
+  } //.column-section
 
   #months-product {
     @include position(absolute, bottom, -410px, left, 50%);
