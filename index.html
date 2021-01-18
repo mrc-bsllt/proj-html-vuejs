@@ -21,14 +21,16 @@
       <!-- header -->
       <header>
 
-        <div class="header-top">
+        <div class="header-top" :class="header.status ? 'bg-black':'bg-trnsprt'">
           <div class="container">
 
 <!-- LOGO IN ALTO A SINISTRA -->
             <div class="left">
               <a href="#">
                 <img
-                :src="'img/' + header.logoImg.path" :alt="header.logoImg.name">
+                :src="'img/' + header.logoImg.path"
+                :alt="header.logoImg.name"
+                :class="header.status ? 'scale-down':'scale-standard'">
               </a>
             </div>
 
@@ -134,10 +136,14 @@
             <h2>Services</h2>
 
             <div class="column-section">
-              <div v-for="column in main.services.columnService" class="column">
-                <div class="content">
+              <div
+              v-for="column in main.services.columnService" class="column"
+              :class="main.services.status ? 'animate__animated animate__backInUp':''">
+                <div
+                v-if="main.services.status"
+                class="content">
                   <img :src="'img/' + column.iconPath" :alt="column.alt">
-                  <h3>{{ column.title }}</h3>
+                  <h3 v-html="column.title"></h3>
                   <p>{{ column.paragraph }}</p>
                 </div>
               </div>

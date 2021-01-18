@@ -110,6 +110,22 @@ main {
   animation-timing-function: linear;
   animation-fill-mode: forwards;
 }
+.bg-trnsprt {
+  background-color: transparent;
+  transition: 0.3s linear;
+}
+.bg-black {
+  background-color: rgba(0, 0, 0, 0.7);
+  transition: 0.3s linear;
+}
+.scale-standard {
+  transform: scale(1);
+  transition: 0.3s linear;
+}
+.scale-down {
+  transform: scale(0.8);
+  transition: 0.3s linear;
+}
 // animazioni
 @keyframes zoomUp {
   0% {

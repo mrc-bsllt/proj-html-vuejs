@@ -3,6 +3,7 @@ var app = new Vue(
     el: "#app",
     data: {
       header: {
+        status: false,
         logoImg: {
           name: "logo",
           path: "avadabarbers-logo-x1.png"
@@ -77,6 +78,7 @@ var app = new Vue(
       },
       main: {
         services: {
+          status: false,
           columnService: [
             {
               iconPath: "avadabarbers-trimcut-icon-before.png",
@@ -199,15 +201,41 @@ var app = new Vue(
       }
     }, //fine data
     methods: {
+
       toogleActiveClass: function(ref, ref2, index) {
         this[ref][ref2][index].active = !this[ref][ref2][index].active;
       }, //fine funzione
+
       changeBgLayover: function(index) {
         this.header.layoverMenu.activeBgIndex = index;
       }, //fine funzione
+
       toggleHoverEffect: function (ref, ref2, index) {
         this[ref][ref2][index].hoverEffect = !this[ref][ref2][index].hoverEffect;
       }, //fine funzione
-    } //methods
-  }
+
+      getSectionTopCordinal: function(sectionId) {
+        const section = document.getElementById(sectionId);
+        const allSectionCordinal = section.getBoundingClientRect();
+        return allSectionCordinal.top - 650;
+      } // fine funzione
+
+    }, // fine methods
+    mounted: function () {
+      const targetCordinal = this.getSectionTopCordinal("services")
+
+      window.addEventListener('scroll', () => {
+        if (window.scrollY > 1 && !this.header.navIcons[1].active) {
+          this.header.status = true;
+          console.log(window.scrollY, targetCordinal);
+        } else {
+          this.header.status = false;
+        }
+
+        if (window.scrollY >= targetCordinal) {
+          this.main.services.status = true;
+        }
+      })
+    } // fine mounted
+  } // fine Vue
 );
